@@ -6,6 +6,7 @@ $(document).ready(function(){
             url: menu,
             success: function (response) {
                 $("#resultado").html(response);
+                console.log(menu);
 
             }
         });
