@@ -13,8 +13,15 @@ $(document).ready(function(){
     });
 
     $("#adicionar").click(function(){
-        var dados = $("#form-check").serialize();
-        console.log(dados.responsavel);
-        console.log(dados);
+        var responsavel = $("#responsavel").val();
+        var equipe = $("#equipe").val();
+        var linha = $("#linha").val();
+        var referencia = $("#referencia").val();
+        var lote = $("#lote").val();
+        var marca = $("#marca").val();
+
+        var resultado = "Responsavel:" +responsavel+"<br> Equipe: "+equipe;
+        console.log(resultado);
+        
     });
 });
