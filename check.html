@@ -1,12 +1,14 @@
 <body>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
 
     <div class="container-fluid">
-        
-        <div class="row bg-primary text-dark p-2">
+
+        <div class="row bg-secondary text-dark p-2">
             <div class="col">
                 <i id="index.html" class=" menu fas fa-arrow-left"></i>
-                <label id="index.html" class="menu" >Voltar</label>
+                <label id="index.html" class="menu">Voltar</label>
             </div>
             <div class="col">
                 <strong>Checklist</strong>
@@ -15,14 +17,71 @@
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="col">
-                <div class="md-form">
-                   <input type="text" id="form1" class="form-control text-light">
-                   <label for="form1">Responsavel</label>
+        <form id="form-check">
+            <div class="row">
+                <div class="col">
+                    <div class="md-form">
+                        <input id="responsavel" name="responsavel" type="text" class="form-control text-light">
+                        <label class="form-label" for="responsavel">Responsável</label>
+                    </div>
+                </div>
+               
+               
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="text-light" >Equipe:</label>
+                    <select style="border-color: white;border-left: none;border-top: none;border-right: none;" class="form-control bg-dark text-light" name="equipe" id="equipe">
+                        <option value="0">Selecione</option>
+                        <option>Equipe 1</option>
+                        <option>Equipe 2</option>
+                        <option>Equipe 4</option>
+                    </select>
+                </div>
+                    <div class="col">
+                        <label class="text-light" >Linha:</label>
+                        <select style="border: none;" class="form-control bg-dark text-light" name="linha" id="linha">
+                            <option value="0">Selecione</option>
+                            <option>Linha 1 </option>
+                            <option>Linha 2 </option>
+                            <option>Escolha 3 </option>
+                            <option>Escolha 4 </option>
+                            <option>Linha 4 </option>
+                            <option>Linha 5 </option>
+                            <option>Escolha 6A/B </option>
+                            <option>Escolha 6A </option>
+                            <option>Escolha 6B </option>
+                            <option>Saída do Forno </option>
+                        </select>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="md-form">
+                       <input type="text" id="referencia" class="form-control text-light">
+                       <label for="referencia">Referência</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="md-form">
+                       <input type="text" id="lote" class="form-control text-light">
+                       <label for="lote">Lote</label>
+                    </div>
                 </div>
             </div>
-            <div class="col"></div>
-        </div>
+
+            <div class="row">
+                <div class="col">
+                    <label class="text-light" >Marca:</label>
+                    <select style="border: none;" class="form-control bg-dark text-light" name="marca" id="marca">
+                        <option value="0">Selecione</option>
+                        <option>Biancogres</option>
+                        <option>Incesa</option>
+                        <option>Biancogres (Galeria)</option>
+                       
+                    </select>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
