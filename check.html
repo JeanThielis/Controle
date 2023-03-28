@@ -1,37 +1,45 @@
 <body>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-
 
     <div class="container-fluid">
 
-        <div class="row bg-secondary text-dark p-2">
+        <div class="row fixed-top bg-secondary text-dark p-2">
             <div class="col">
                 <i id="index.html" class=" menu fas fa-arrow-left"></i>
                 <label id="index.html" class="menu">Voltar</label>
             </div>
             <div class="col">
-                <strong>Checklist</strong>
+                <strong class="position-relative">
+                    Checklist
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        1
+                      </span>
+                </strong>
+              
             </div>
             <div class="col">
             </div>
         </div>
         <br>
         <form id="form-check">
-            <div class="row">
-                <div class="col">
-                    <div class="md-form">
-                        <input id="responsavel" name="responsavel" type="text" class="form-control text-light">
-                        <label class="form-label" for="responsavel">Responsável</label>
+            <div  class="alert corFundo">
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input id="responsavel" name="responsavel" type="text" class="form-control text-light">
+                            <label class="text-light" for="responsavel">Responsável</label>
+                        </div>
                     </div>
+                   
+                   
                 </div>
-               
-               
+
             </div>
+           <div class="alert corFundo">
             <div class="row">
                 <div class="col">
                     <label class="text-light" >Equipe:</label>
-                    <select style="border-color: white;border-left: none;border-top: none;border-right: none;" class="form-control bg-dark text-light" name="equipe" id="equipe">
+                    <select class="bordaSelect form-control  text-light" name="equipe" id="equipe">
                         <option value="0">Selecione</option>
                         <option>Equipe 1</option>
                         <option>Equipe 2</option>
@@ -40,7 +48,7 @@
                 </div>
                     <div class="col">
                         <label class="text-light" >Linha:</label>
-                        <select style="border: none;" class="form-control bg-dark text-light" name="linha" id="linha">
+                        <select class="bordaSelect form-control text-light" name="linha" id="linha">
                             <option value="0">Selecione</option>
                             <option>Linha 1 </option>
                             <option>Linha 2 </option>
@@ -59,21 +67,24 @@
                 <div class="col">
                     <div class="md-form">
                        <input type="text" id="referencia" class="form-control text-light">
-                       <label for="referencia">Referência</label>
+                       <label class="text-light" for="referencia">Referência</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="md-form">
-                       <input type="text" id="lote" class="form-control text-light">
-                       <label for="lote">Lote</label>
+                       <input type="text" id="lote" class=" form-control text-light">
+                       <label class="text-light" for="lote">Lote</label>
                     </div>
                 </div>
             </div>
 
+           </div>
+            
+           <div class="alert corFundo">
             <div class="row">
                 <div class="col">
                     <label class="text-light" >Marca:</label>
-                    <select style="border: none;" class="form-control bg-dark text-light" name="marca" id="marca">
+                    <select class="bordaSelect  form-control text-light" name="marca" id="marca">
                         <option value="0">Selecione</option>
                         <option>Biancogres</option>
                         <option>Incesa</option>
@@ -82,6 +93,100 @@
                     </select>
                 </div>
             </div>
+
+           </div>
+
+           <div class="alert corFundo">
+            <label class="text-light">Código de Barras</label>
+
+            <div class="row">
+                <div class="col">
+                    <div class="md-form">
+                       <input type="text" id="extra" name="extra" class="form-control text-light">
+                       <label for="extra">Extra</label>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="md-form">
+                        <input type="text" id="comercial" name="comercial" class="form-control text-light">
+                        <label for="comercial">Comercial</label>
+                     </div>
+                </div>
+                <div class="col">
+                    <div class="md-form">
+                        <input type="text" id="popular" name="popular" class="form-control text-light">
+                        <label for="popular">Popular</label>
+                     </div>
+                </div>
+            </div>
+           </div>
+           <div class="alert corFundo">
+            <div class="row">
+                <div class="col p-1">
+                    <label class="text-light">Local de uso</label>
+                    <select name="local" id="local" class="bordaSelect form-control">
+                        <option value="0">Selecione</option>
+                        <option>LA</option>
+                        <option>LC</option>
+                        <option>LD</option>
+                        <option>LE</option>
+                    </select>
+                </div>
+                <div class="col p-1">
+                    <label for="ad" class="text-light">Classe AD</label>
+                    <select name="ad" id="ad" class="form-control bordaSelect">
+                        <option value="0">Selecione</option>
+                        <option>AD1</option>
+                        <option>AD2</option>
+                        <option>AD3</option>
+                        <option>AD4</option>
+
+                    </select>
+                </div>
+                <div class="col p-1">
+                    <label for="variacao" class="text-light">Variação Ton</label>
+                    <select name="variacao" id="variacao" class="form-control bordaSelect">
+                        <option value="0">Selecione</option>
+                        <option >V1</option>
+                        <option >V2</option>
+                        <option >V3</option>
+                        <option >V4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-1">
+                    <div class="md-form">
+                       <input type="text" id="calibre" class="form-control">
+                       <label for="calibre">Calibre</label>
+                    </div>
+                </div>
+                <div class="col p-1">
+                    <div class="md-form">
+                        <input type="text" id="peso" class="form-control">
+                        <label for="peso">Peso</label>
+                     </div>
+                </div>
+                <div class="col p-1">
+                    <div class="md-form">
+                        <input type="text" id="espessura" class="form-control">
+                        <label for="espessura">Espessura</label>
+                     </div>
+                </div>
+            </div>
+
+           </div>
+          
+           <br>
+           <div class="row">
+            <div class="col">
+                <button id="adicionar" style="width: 100%;" type="button" class="text-dark btn btn-secondary">Adicionar</button>
+            </div>
+           </div>
+           <br>
+           <br>
+            
         </form>
     </div>
 </body>

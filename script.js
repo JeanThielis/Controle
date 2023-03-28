@@ -11,4 +11,10 @@ $(document).ready(function(){
             }
         });
     });
+
+    $("#adicionar").click(function(){
+        var dados = $("#form-check").serialize();
+        console.log(dados.responsavel);
+        console.log(dados);
+    });
 });
