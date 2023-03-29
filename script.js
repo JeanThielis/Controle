@@ -20,12 +20,12 @@ $(document).ready(function(){
         var lote = $("#lote").val();
         var marca = $("#marca").val();
 
-        var resultado = "Responsavel:" +responsavel+
-                    "<br> Equipe: "+equipe+
-                    "<br> Linha: "+linha+
-                    "<br> Referência: "+referencia+
-                    "<br> Lote: "+lote+
-                    "<br> Marca: "+marca;
+        var resultado ="Responsável: " +responsavel+
+                    "\n Equipe: "+equipe+
+                    "\n Linha: "+linha+
+                    "\n Referência: "+referencia+
+                    "\n Lote: "+lote+
+                    "\n Marca: "+marca;
 
         vetorResultado.push(resultado);
 
@@ -34,7 +34,7 @@ $(document).ready(function(){
             url:"telaResultado.html",
             success: function (response) {
                 $("#resultado").html(response);
-                $("#divResultado").html(vetorResultado);
+                $("#textResultado").val(vetorResultado);
 
 
 
