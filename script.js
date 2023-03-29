@@ -6,13 +6,13 @@ $(document).ready(function(){
             url: menu,
             success: function (response) {
                 $("#resultado").html(response);
-                console.log(menu);
 
             }
         });
     });
 
     $("#adicionar").click(function(){
+        vetorResultado = [];
         var responsavel = $("#responsavel").val();
         var equipe = $("#equipe").val();
         var linha = $("#linha").val();
@@ -20,8 +20,30 @@ $(document).ready(function(){
         var lote = $("#lote").val();
         var marca = $("#marca").val();
 
-        var resultado = "Responsavel:" +responsavel+"<br> Equipe: "+equipe;
-        console.log(resultado);
+        var resultado = "Responsavel:" +responsavel+
+                    "<br> Equipe: "+equipe+
+                    "<br> Linha: "+linha+
+                    "<br> Referência: "+referencia+
+                    "<br> Lote: "+lote+
+                    "<br> Marca: "+marca;
+
+        vetorResultado.push(resultado);
+
+
+        $.ajax({
+            url:"telaResultado.html",
+            success: function (response) {
+                $("#resultado").html(response);
+                $("#divResultado").html(vetorResultado);
+
+
+
+                
+            }
+        });
+
+
+
         
     });
 });
