@@ -1,25 +1,27 @@
 <body>
     <script src="script.js"></script>
-
     <div class="container-fluid">
-
-        <div class="row fixed-top bg-secondary text-dark p-2">
+    
+        <div class="row  bg-secondary text-dark p-2 fixed-top">
             <div class="col">
                 <i id="index.html" class=" menu fas fa-arrow-left"></i>
                 <label id="index.html" class="menu">Voltar</label>
             </div>
             <div class="col">
-                <strong class="position-relative">
+                <strong id="visualizar-check" class="position-relative">
                     Checklist
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                        1
-                      </span>
+                   
                 </strong>
+                
+                <span id="tamanho-lista" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                    0
+                  </span>
               
             </div>
             <div class="col">
             </div>
         </div>
+
         <br>
         <form id="form-check">
             <div  class="alert corFundo">
@@ -158,25 +160,37 @@
             <div class="row">
                 <div class="col p-1">
                     <div class="md-form">
-                       <input type="text" id="calibre" class="form-control">
+                       <input type="text" id="calibre" class="form-control text-light">
                        <label for="calibre">Calibre</label>
                     </div>
                 </div>
                 <div class="col p-1">
                     <div class="md-form">
-                        <input type="text" id="peso" class="form-control">
+                        <input type="text" id="peso" class="form-control text-light">
                         <label for="peso">Peso</label>
                      </div>
                 </div>
                 <div class="col p-1">
                     <div class="md-form">
-                        <input type="text" id="espessura" class="form-control">
+                        <input type="text" id="espessura" class="form-control text-light">
                         <label for="espessura">Espessura</label>
                      </div>
                 </div>
             </div>
 
            </div>
+           <br>
+           
+        <div class="row">
+            <div class="col">
+                <div style="display: none;" id="alertSucesso" class="alert alert-success" role="alert">
+                    <strong>Informaçãoes Inserida com Sucesso</strong>
+                </div>
+               
+            </div>
+        </div>
+      
+        
           
            <br>
            <div class="row">
