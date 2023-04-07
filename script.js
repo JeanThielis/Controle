@@ -1,8 +1,8 @@
 
 $(document).ready(function(){
-    const vetorResultado = Array();
-    const data = new Date();
-    const data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
+    vetorResultado = Array();
+    data = new Date();
+    data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
 
     function alertConfirm(tipo,titulo,mensagem,time){
         Swal.fire({
@@ -68,6 +68,7 @@ $(document).ready(function(){
                         "\n *Extra:* "+extra+
                         "\n *Comercial:* "+comercial+
                         "\n *Popular:* "+popular+"\n";
+                        
                     $.ajax({
                         success: function () {
                             vetorResultado.push(resultado);
