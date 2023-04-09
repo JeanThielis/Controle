@@ -27,21 +27,21 @@ $(document).ready(function(){
     });
 
     $("#adicionar").click(function(){
-        var responsavel = $("#responsavel").val();
-        var equipe = $("#equipe").val();
-        var linha = $("#linha").val();
-        var referencia = $("#referencia").val();
-        var lote = $("#lote").val();
-        var marca = $("#marca").val();
-        var extra = $("#extra").val();
-        var comercial = $("#comercial").val();
-        var popular = $("#popular").val ();
-        var local = $("#local").val();
-        var ad = $("#ad").val();
-        var variacao = $("#variacao").val();
-        var calibre = $("#calibre").val();
-        var peso = $("#peso").val();
-        var espessura = $("#espessura").val();
+         var responsavel = $("#responsavel").val();
+         var equipe = $("#equipe").val();
+         var linha = $("#linha").val();
+         var referencia = $("#referencia").val();
+         var lote = $("#lote").val();
+         var marca = $("#marca").val();
+         var extra = $("#extra").val();
+         var comercial = $("#comercial").val();
+         var popular = $("#popular").val ();
+         var local = $("#local").val();
+         var ad = $("#ad").val();
+         var variacao = $("#variacao").val();
+         var calibre = $("#calibre").val();
+         var peso = $("#peso").val();
+         var espessura = $("#espessura").val();
 
         
 
