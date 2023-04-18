@@ -14,6 +14,29 @@ $(document).ready(function(){
           })
     
        };
+    function limparFormulario(){
+         $("#linha").val(" ");
+        $("#referencia").val(" ");
+        $("#lote").val(" ");
+        $("#marca").val(' ');
+        $("#extra").val(' ');
+        $("#comercial").val(" ");
+        $("#popular").val (" ");
+        $("#local").val(" ");
+        $("#ad").val(' ');
+        $("#variacao").val(' ');
+        $("#calibre").val(' ');
+        $("#peso").val(' ');
+        $("#espessura").val(' ');
+
+
+    }
+    $("#enviar").click(function(){
+        var relatorioPronto = $("#textResultado").val();
+        var texto = "https://wa.me/?text="+relatorioPronto;
+        open(texto); 
+    })
+     
 
     $(".menu").click(function(){
         var menu=this.id;
@@ -25,6 +48,9 @@ $(document).ready(function(){
             }
         });
     });
+    $("#lote").keyup(function(){
+        $(this).val($(this).val().toUpperCase());
+      });
 
     $("#adicionar").click(function(){
          var responsavel = $("#responsavel").val();
@@ -67,14 +93,15 @@ $(document).ready(function(){
                         "\n *Código de Barra*"+
                         "\n *Extra:* "+extra+
                         "\n *Comercial:* "+comercial+
-                        "\n *Popular:* "+popular+"\n";
+                        "\n *Popular:* "+popular+"\n";               
                         
                     $.ajax({
                         success: function () {
                             vetorResultado.push(resultado);
+                            vetorNovo = vetorResultado.join('_________________________________')
                             $("#tamanho-lista").html(vetorResultado.length);
                             alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
-                    
+                            limparFormulario();                    
                             
                         }
                     });
@@ -85,7 +112,7 @@ $(document).ready(function(){
             url:"telaResultado.html",
             success: function (response) {
                 $("#resultado").html(response);
-                $("#textResultado").val(cabecalho+vetorResultado);
+                $("#textResultado").val(cabecalho+vetorNovo);
                 
             }
         });         
