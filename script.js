@@ -33,7 +33,7 @@ $(document).ready(function(){
     }
     $("#enviar").click(function(){
         var relatorioPronto = $("#textResultado").val();
-        var texto = "https://wa.me/?text="+relatorioPronto;
+        var texto = "https://api.whatsapp.com/send?text="+relatorioPronto;
         open(texto); 
     })
      
