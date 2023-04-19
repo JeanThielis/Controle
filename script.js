@@ -32,11 +32,17 @@ $(document).ready(function(){
 
     }
     $("#enviar").click(function(){
-        var relatorioPronto = $("#textResultado").val();
-        var texto = "https://api.whatsapp.com/send?text="+relatorioPronto;
-        open(texto); 
-    })
-     
+            try {
+            resultado=$("#textResultado").val();
+            conteudo = encodeURIComponent(resultado);
+            document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
+            } catch (error) {
+              alert("deu ruim");
+
+            }
+           
+        })
+       
 
     $(".menu").click(function(){
         var menu=this.id;
@@ -71,29 +77,29 @@ $(document).ready(function(){
 
         
 
-         cabecalho =    "\n *Check-list Início do Turno*"+  
-                        "\n<br> *Responsável:* " +responsavel+
-                        "\n<br> *Equipe:* "+equipe+
-                        "\n<br> *Data:* "+data_nova+"\n\n";
+         cabecalho =    "\n*Check-list Início do Turno*"+  
+                        "\n*Responsável:* " +responsavel+
+                        "\n*Equipe:* "+equipe+
+                        "\n*Data:* "+data_nova+"\n\n";
                         
 
-        var resultado = "\n<br>*Linha:* "+linha+
-                        "\n<br>*Referência:* "+referencia+
-                        "\n<br>*Lote:* "+lote+
-                        "\n<br>"+
-                        "\n<br>*Marca:* "+marca+
-                        "\n<br>"+
-                        "\n<br>*Local de Uso:* "+local+
-                        "\n<br>*Classe AD:* "+ad+
-                        "\n<br>*Variação de Tonalidade:* "+variacao+
-                        "\n<br>*Calibre:* "+calibre+
-                        "\n<br>*Peso:* "+peso+"Kg"+
-                        "\n<br>*Espessura:* "+espessura+"mm"+
-                        "\n<br>"+
-                        "\n<br>*Código de Barra*"+
-                        "\n<br>*Extra:* "+extra+
-                        "\n<br>*Comercial:* "+comercial+
-                        "\n<br>*Popular:* "+popular+"\n";               
+        var resultado = "\n*Linha:* "+linha+
+                        "\n*Referência:* "+referencia+
+                        "\n*Lote:* "+lote+
+                        "\n"+
+                        "\n*Marca:* "+marca+
+                        "\n"+
+                        "\n*Local de Uso:* "+local+
+                        "\n*Classe AD:* "+ad+
+                        "\n*Variação de Tonalidade:* "+variacao+
+                        "\n*Calibre:* "+calibre+
+                        "\n*Peso:* "+peso+"Kg"+
+                        "\n*Espessura:* "+espessura+"mm"+
+                        "\n"+
+                        "\n*Código de Barra*"+
+                        "\n*Extra:* "+extra+
+                        "\n*Comercial:* "+comercial+
+                        "\n*Popular:* "+popular+"\n";               
                         
                     $.ajax({
                         success: function () {
