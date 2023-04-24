@@ -1,8 +1,7 @@
 
 $(document).ready(function(){
     vetorResultado = Array();
-    data = new Date();
-    data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
+    
 
     function alertConfirm(tipo,titulo,mensagem,time){
         Swal.fire({
@@ -75,12 +74,12 @@ $(document).ready(function(){
          var peso = $("#peso").val();
          var espessura = $("#espessura").val();
 
-        
 
-         cabecalho =    "\n*Check-list Início do Turno*"+  
-                        "\n*Responsável:* " +responsavel+
-                        "\n*Equipe:* "+equipe+
-                        "\n*Data:* "+data_nova+"\n\n";
+         cabecalho =    "\n*Relatório de Empeno*"+  
+         "\n*Responsável:* " +responsavel+
+         "\n*Equipe:* "+equipe+
+         "\n*Data:* "+data_nova+"\n\n";
+        
                         
 
         var resultado = "\n*Linha:* "+linha+

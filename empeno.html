@@ -1,16 +1,194 @@
 <body>
-    <script src="script.js"></script>
-
+    <script src="scriptEmpeno.js"></script>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col text-light">
-                empeno
+    
+        <div class="row  bg-primary text-dark p-2 fixed-top">
+            <div class="col">
+                <i id="index.html" class=" menu fas fa-arrow-left"></i>
+                <label id="index.html" class="menu">Voltar</label>
             </div>
             <div class="col">
-                <button id="index.html" type="button" class="menu btn btn-primary">Voltar</button>
-
+                <strong id="visualizar-check" class="position-relative">
+                    Empeno
+                   
+                </strong>
+                
+                <span id="tamanho-lista" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                    0
+                  </span>
+              
+            </div>
+            <div class="col">
             </div>
         </div>
+
+        <br>
+            <div  class="alert corFundo">
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input id="responsavel" name="responsavel" type="text" class="form-control text-light">
+                            <label class="text-light" for="responsavel">Responsável</label>
+                        </div>
+                    </div>
+                   
+                   
+                </div>
+
+            </div>
+           <div class="alert corFundo">
+            <div class="row">
+                <div class="col">
+                    <label class="text-light" >Equipe:</label>
+                    <select class="bordaSelect form-control  text-light" name="equipe" id="equipe">
+                        <option value="0">Selecione</option>
+                        <option>Equipe 1</option>
+                        <option>Equipe 2</option>
+                        <option>Equipe 4</option>
+                    </select>
+                </div>
+                    <div class="col">
+                        <label class="text-light" >Linha:</label>
+                        <select class="bordaSelect form-control text-light" name="linha" id="linha">
+                            <option value="0">Selecione</option>
+                            <option>Linha 1 </option>
+                            <option>Linha 2 </option>
+                            <option>Escolha 3 </option>
+                            <option>Escolha 4 </option>
+                            <option>Linha 4 </option>
+                            <option>Linha 5 </option>
+                            <option>Escolha 6A/B </option>
+                            <option>Escolha 6A </option>
+                            <option>Escolha 6B </option>
+                            <option>Saída do Forno </option>
+                        </select>
+                    </div>
+            </div>
+            <form id="form-empeno">
+
+            <div class="row">
+                <div class="col">
+                    <div class="md-form">
+                       <input type="text" id="referencia" class="form-control text-light">
+                       <label class="text-light" for="referencia">Referência</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="md-form">
+                       <input type="text" id="lote" class=" form-control text-light">
+                       <label class="text-light" for="lote">Lote</label>
+                    </div>
+                </div>
+            </div>
+
+           </div>
+            
+           <div class="alert corFundo">
+            <strong class="text-light"> Peça (+)</strong>
+            <div class="row">
+                <div class="col p-0 m-1">
+                    <div class="md-form">
+                        <input type="number" id="ladoa" name="ladoa" class="form-control text-light">
+                        <label class="text-light" for="ladoa">Lado A</label>
+                     </div>
+                </div>
+                <div class="col p-0 m-1">
+                    <div class="md-form">
+                        <input type="number" id="ladob" name="ladob" class="form-control text-light">
+                        <label class="text-light" for="ladob">Lado B</label>
+                     </div>
+                </div>
+                <div class="col p-0 m-1">
+                    <div class="md-form">
+                        <input type="number" id="ladoc" name="ladoc" class="form-control text-light">
+                        <label class="text-light" for="ladoc">Lado C</label>
+                     </div>
+                </div>
+                <div class="col p-0 m-1">
+                    <div class="md-form">
+                        <input type="number" id="ladod" name="ladod" class="form-control text-light">
+                        <label class="text-light" for="ladod">Lado D</label>
+                     </div>
+                </div>
+            </div>
+            <br>
+            <strong class="text-light">Central</strong>
+            <div class="row">
+                <div class="col">
+                    <div class="md-form">
+                        <input type="number" id="centrala" name="centrala" class="form-control text-light">
+                        <label class="text-light" for="centrala">Central A</label>
+                     </div>
+                </div>
+                <div class="col">
+                    <div class="md-form">
+                        <input type="number" id="centralb" name="centralb" class="form-control text-light">
+                        <label class="text-light" for="centralb">Central B</label>
+                     </div>
+                </div>
+            </div>
+
+           </div>
+
+           <div class="alert corFundo">
+            <strong class="text-light">Peça (-) </strong>
+
+            <div class="row">
+                <div class="col p-0 m-1">
+                    <div class="md-form">
+                        <input type="number" id="ladoA" name="ladoA" class="form-control text-light">
+                        <label class="text-light" for="ladoA">Lado A</label>
+                     </div>
+                </div>
+                <div class="col p-0 m-1">
+                    <div class="md-form">
+                        <input type="number" id="ladoB" name="ladoB" class="form-control text-light">
+                        <label class="text-light" for="ladoB">Lado B</label>
+                     </div>
+                </div>
+                <div class="col p-0 m-1">
+                    <div class="md-form">
+                        <input type="number" id="ladoC" name="ladoC" class="form-control text-light">
+                        <label class="text-light" for="ladoc">Lado C</label>
+                     </div>
+                </div>
+                <div class="col p-0 m-1">
+                    <div class="md-form">
+                        <input type="number" id="ladoD" name="ladoD" class="form-control text-light">
+                        <label class="text-light" for="ladoD">Lado D</label>
+                     </div>
+                </div>
+               
+            </div>
+
+            <strong class="text-light">Central</strong>
+            <div class="row">
+                <div class="col">
+                    <div class="md-form">
+                        <input type="number" id="centralA" name="centralA" class="form-control text-light">
+                        <label class="text-light" for="centralA">Central A</label>
+                     </div>
+                </div>
+                <div class="col">
+                    <div class="md-form">
+                        <input type="number" id="centralB" name="centralB" class="form-control text-light">
+                        <label class="text-light" for="centralB">Central B</label>
+                     </div>
+                </div>
+            </div>
+           </div>
+          
+           <br>
+          
+           <br>
+           <div class="row">
+            <div class="col">
+                <button id="adicionarEmpeno" style="width: 100%;" type="button" class="fixed-bottom text-dark btn btn-primary">Adicionar</button>
+            </div>
+           </div>
+           <br>
+           <br>
+            
+        </form>
     </div>
 </body>
