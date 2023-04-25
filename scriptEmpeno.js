@@ -3,6 +3,54 @@ $(document).ready(function () {
     data = new Date();
     data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
 
+    $(".menu").click(function(){
+        var menu=this.id;
+        $.ajax({
+            url: menu,
+            success: function (response) {
+                $("#resultado").html(response);
+
+            }
+        });
+    });
+    $("#lote").keyup(function(){
+        $(this).val($(this).val().toUpperCase());
+      });
+
+
+    function alertConfirm(tipo,titulo,mensagem,time){
+        Swal.fire({
+            title: titulo,
+            icon: tipo,
+            text:mensagem,
+            showConfirmButton: false,
+            timer: time
+          })
+    
+       };
+
+   function limparForm(){
+
+    $("#referencia").val('');
+    $("#lote").val('');
+    $("#ladoa").val('');
+    $("#ladob").val('');
+    $("#ladoc").val('');
+    $("#ladod").val('');
+    $("#centrala").val('');
+    $("#centralb").val('');
+    
+
+    $("#ladoA").val('');
+    $("#ladoB").val('');
+    $("#ladoC").val('');
+    $("#ladoD").val('');
+    $("#centralA").val('');
+    $("#centralB").val('');
+
+   }
+
+
    $("#adicionarEmpeno").click(function () {
     var responsavel = $("#responsavel").val();
     var equipe = $("#equipe").val();
@@ -60,6 +108,8 @@ $(document).ready(function () {
             vetorNovo = vetorEmpeno.join('_________________________________')
             $("#tamanho-lista").html(vetorEmpeno.length);
             alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
+            limparForm();
+
         }
     });
    });

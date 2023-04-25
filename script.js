@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
     vetorResultado = Array();
+    data = new Date();
+    data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
     
 
     function alertConfirm(tipo,titulo,mensagem,time){
