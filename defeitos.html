@@ -1,5 +1,7 @@
 <body>
     <script src="scriptDefeitos.js"></script>
+    <script src="script.js"></script>
+
 
     <div class="container-fluid">
        
@@ -13,10 +15,6 @@
                     Defeitos
                    
                 </strong>
-                
-                <span id="tamanho-lista" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                    0
-                  </span>
               
             </div>
             <div class="col">
@@ -99,7 +97,7 @@
                 <div class="col">
                     <div class="md-form">
                         <input type="number" id="vistoriadas" name="vistoriadas" type="text" class="form-control text-light">
-                        <label class="text-light" for="vistoriadas">Peças Vistoriadas</label>
+                        <label class="text-light" for="vistoriadas">Total Peças Vistoriadas</label>
                     </div>
                 </div>
 
@@ -109,7 +107,7 @@
                     <div class="col">
                         <div class="md-form">
                             <input type="number" id="encontrada" name="encontrada" type="text" class="form-control text-light">
-                            <label class="text-light" for="encontrada">Defeitos Encontrado</label>
+                            <label class="text-light" for="encontrada">Total Defeitos Encontrado</label>
                     </div>
                 </div>
             </div>
@@ -135,7 +133,7 @@
                     </h1>
                 </div>
             </div>
-            <textarea name="textResultado" id="textResultado" cols="30" rows="10"></textarea>
+            <textarea style="display: none;" name="textResultado" id="textResultado" cols="30" rows="10"></textarea>
         </div>
         
         <div class="row">

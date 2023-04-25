@@ -6,10 +6,23 @@ $(document).ready(function () {
         $("#referencia").val('');
         $("#lote").val('');
         $("#linha").val('');
-        $("#defeitos").val('');
-        $("#vistoriadas").val('');
-        $("#encontrada").val('');
+       
     }
+    $("#lote").keyup(function(){
+        $(this).val($(this).val().toUpperCase());
+      });
+
+    function alertConfirm(tipo,titulo,mensagem,time){
+        Swal.fire({
+            title: titulo,
+            icon: tipo,
+            text:mensagem,
+            showConfirmButton: false,
+            timer: time
+          })
+    
+       };
+
 
     
     $("#calcular").click(function(){
@@ -42,7 +55,20 @@ $(document).ready(function () {
                             "*Defeitos:* "+defeitos+
                             "\n*Quantidade Vistoridas:* "+vistoriada+
                             "\n*Quantidade de Defeitos:* "+encontrada+
-                            "\n*Porcentagem:* "+resultadoCalculo+"%";
+                            "\n*Porcentagem:* "+resultadoCalculo.toFixed(0)+"%";
+        try {
+            vetorDefeitos.push(relatorioDefeitos);
+            $("#textResultado").val(cabecalho+vetorDefeitos);
+    
+            $("#resultadoDefeitos").html(resultadoCalculo.toFixed(0)+"%");
+            $("#enviar").css('display','block');
+            $("#calcular").css('display','none');
+            alertConfirm('success','Legal','Dados Inserido com Sucesso',2000)
+            limparDados();
+        } catch (error) {
+            alertConfirm('error','Operação não Concluída','Entra em contato com Desenvolvedor',3000)
+
+        }                    
 
         vetorDefeitos.push(relatorioDefeitos);
         $("#textResultado").val(cabecalho+vetorDefeitos);
@@ -64,7 +90,8 @@ $(document).ready(function () {
             conteudo = encodeURIComponent(resultado);
             document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
             } catch (error) {
-              alert("deu ruim");
+              
+                alertConfirm('error','Operação não Concluída','Entra em contato com Desenvolvedor',3000)
 
             }
     });
