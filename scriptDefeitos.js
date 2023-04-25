@@ -69,15 +69,6 @@ $(document).ready(function () {
             alertConfirm('error','Operação não Concluída','Entra em contato com Desenvolvedor',3000)
 
         }                    
-
-        vetorDefeitos.push(relatorioDefeitos);
-        $("#textResultado").val(cabecalho+vetorDefeitos);
-
-        $("#resultadoDefeitos").html(resultadoCalculo.toFixed(0)+"%");
-        $("#enviar").css('display','block');
-        $("#calcular").css('display','none');
-        limparDados();
-                
          
     });
     $("#vistoriadas,#defeitos,#encontrada").click(function(){
