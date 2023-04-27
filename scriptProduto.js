@@ -1,6 +1,7 @@
 $(document).ready(function () {
     obj = Object();
     vetor = Array();
+    
     $("#tonalidade").change(function(){
         var valor = parseInt($(this).val());
 
