@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    vetorDefeitos = Array();
+    vetorDefeitos = Array(1);
     data = new Date();
     data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
     function limparDados(){
@@ -65,6 +65,7 @@ $(document).ready(function () {
             $("#calcular").css('display','none');
             alertConfirm('success','Legal','Dados Inserido com Sucesso',2000)
             limparDados();
+            vetorDefeitos.pop();
         } catch (error) {
             alertConfirm('error','Operação não Concluída','Entra em contato com Desenvolvedor',3000)
 
