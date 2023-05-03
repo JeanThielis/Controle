@@ -11,19 +11,9 @@ $(document).ready(function () {
     $("#lote").keyup(function(){
         $(this).val($(this).val().toUpperCase());
       });
-
-    function alertConfirm(tipo,titulo,mensagem,time){
-        Swal.fire({
-            title: titulo,
-            icon: tipo,
-            text:mensagem,
-            showConfirmButton: false,
-            timer: time
-          })
-    
-       };
-
-
+    function fecharAlert(){
+        $("#alertSucesso").fadeOut();
+    }
     
     $("#calcular").click(function(){
         var responsavel = $("#responsavel").val();
@@ -63,7 +53,9 @@ $(document).ready(function () {
             $("#resultadoDefeitos").html(resultadoCalculo.toFixed(0)+"%");
             $("#enviar").css('display','block');
             $("#calcular").css('display','none');
-            alertConfirm('success','Legal','Dados Inserido com Sucesso',2000)
+            $("#alertSucesso").fadeIn();
+            setTimeout(fecharAlert,3000);
+
             limparDados();
             vetorDefeitos.pop();
         } catch (error) {

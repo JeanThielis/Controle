@@ -1,7 +1,7 @@
 <body>
     <script src="script.js"></script>
     <div class="container-fluid">
-    
+
         <div class="row  bg-secondary text-dark p-2 fixed-top">
             <div class="col">
                 <i id="index.html" class=" menu fas fa-arrow-left"></i>
@@ -10,36 +10,37 @@
             <div class="col">
                 <strong id="visualizar-check" class="position-relative">
                     Checklist
-                   
+
                 </strong>
-                
-                <span id="tamanho-lista" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+
+                <span id="tamanho-lista"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
                     0
-                  </span>
-              
+                </span>
+
             </div>
             <div class="col">
             </div>
         </div>
 
         <br>
-            <div  class="alert corFundo">
-                <div class="row">
-                    <div class="col">
-                        <div class="md-form">
-                            <input id="responsavel" name="responsavel" type="text" class="form-control text-light">
-                            <label class="text-light" for="responsavel">Responsável</label>
-                        </div>
-                    </div>
-                   
-                   
-                </div>
-
-            </div>
-           <div class="alert corFundo">
+        <div class="alert corFundo">
             <div class="row">
                 <div class="col">
-                    <label class="text-light" >Equipe:</label>
+                    <div class="md-form">
+                        <input id="responsavel" name="responsavel" type="text" class="form-control text-light">
+                        <label class="text-light" for="responsavel">Responsável</label>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="alert corFundo">
+            <div class="row">
+                <div class="col">
+                    <label class="text-light">Equipe:</label>
                     <select class="bordaSelect form-control  text-light" name="equipe" id="equipe">
                         <option value="0">Selecione</option>
                         <option>Equipe 1</option>
@@ -48,66 +49,66 @@
                         <option>Equipe 4</option>
                     </select>
                 </div>
-                    <div class="col">
-                        <label class="text-light" >Linha:</label>
-                        <select class="bordaSelect form-control text-light" name="linha" id="linha">
-                            <option value="0">Selecione</option>
-                            <option>Linha 1 </option>
-                            <option>Linha 2 </option>
-                            <option>Escolha 3 </option>
-                            <option>Escolha 4 </option>
-                            <option>Linha 4 </option>
-                            <option>Linha 5 </option>
-                            <option>Escolha 6A/B </option>
-                            <option>Escolha 6A </option>
-                            <option>Escolha 6B </option>
-                            <option>Saída do Forno </option>
-                        </select>
-                    </div>
+                <div class="col">
+                    <label class="text-light">Linha:</label>
+                    <select class="bordaSelect form-control text-light" name="linha" id="linha">
+                        <option value="0">Selecione</option>
+                        <option>Linha 1 </option>
+                        <option>Linha 2 </option>
+                        <option>Escolha 3 </option>
+                        <option>Escolha 4 </option>
+                        <option>Linha 4 </option>
+                        <option>Linha 5 </option>
+                        <option>Escolha 6A/B </option>
+                        <option>Escolha 6A </option>
+                        <option>Escolha 6B </option>
+                        <option>Saída do Forno </option>
+                    </select>
+                </div>
             </div>
             <form id="form-check">
 
-            <div class="row">
-                <div class="col">
-                    <div class="md-form">
-                       <input type="text" id="referencia" class="form-control text-light">
-                       <label class="text-light" for="referencia">Referência</label>
+                <div class="row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input type="text" id="referencia" class="form-control text-light">
+                            <label class="text-light" for="referencia">Referência</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input type="text" id="lote" class=" form-control text-light">
+                            <label class="text-light" for="lote">Lote</label>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="md-form">
-                       <input type="text" id="lote" class=" form-control text-light">
-                       <label class="text-light" for="lote">Lote</label>
-                    </div>
-                </div>
-            </div>
 
-           </div>
-            
-           <div class="alert corFundo">
+        </div>
+
+        <div class="alert corFundo">
             <div class="row">
                 <div class="col">
-                    <label class="text-light" >Marca:</label>
+                    <label class="text-light">Marca:</label>
                     <select class="bordaSelect  form-control text-light" name="marca" id="marca">
                         <option value="0">Selecione</option>
                         <option>Biancogres</option>
                         <option>Incesa</option>
                         <option>Biancogres (Galeria)</option>
-                       
+
                     </select>
                 </div>
             </div>
 
-           </div>
+        </div>
 
-           <div class="alert corFundo">
+        <div class="alert corFundo">
             <label class="text-light">Código de Barras</label>
 
             <div class="row">
                 <div class="col">
                     <div class="md-form">
-                       <input type="number" id="extra" name="extra" class="form-control text-light">
-                       <label class="text-light" for="extra">Extra</label>
+                        <input type="number" id="extra" name="extra" class="form-control text-light">
+                        <label class="text-light" for="extra">Extra</label>
                     </div>
 
                 </div>
@@ -115,17 +116,17 @@
                     <div class="md-form">
                         <input type="number" id="comercial" name="comercial" class="form-control text-light">
                         <label class="text-light" for="comercial">Comercial</label>
-                     </div>
+                    </div>
                 </div>
                 <div class="col">
                     <div class="md-form">
                         <input type="number" id="popular" name="popular" class="form-control text-light">
                         <label class="text-light" for="popular">Popular</label>
-                     </div>
+                    </div>
                 </div>
             </div>
-           </div>
-           <div class="alert corFundo">
+        </div>
+        <div class="alert corFundo">
             <div class="row">
                 <div class="col p-1">
                     <label class="text-light">Local de uso</label>
@@ -152,46 +153,47 @@
                     <label for="variacao" class="text-light">Variação Ton</label>
                     <select name="variacao" id="variacao" class="form-control text-light bordaSelect">
                         <option value="0">Selecione</option>
-                        <option >V1</option>
-                        <option >V2</option>
-                        <option >V3</option>
-                        <option >V4</option>
+                        <option>V1</option>
+                        <option>V2</option>
+                        <option>V3</option>
+                        <option>V4</option>
                     </select>
                 </div>
             </div>
             <div class="row">
                 <div class="col p-1">
                     <div class="md-form">
-                       <input type="number" id="calibre" class="form-control text-light">
-                       <label class="text-light" for="calibre">Calibre</label>
+                        <input type="number" id="calibre" class="form-control text-light">
+                        <label class="text-light" for="calibre">Calibre</label>
                     </div>
                 </div>
                 <div class="col p-1">
                     <div class="md-form">
                         <input type="number" id="peso" class="form-control text-light">
                         <label class="text-light" for="peso">Peso</label>
-                     </div>
+                    </div>
                 </div>
                 <div class="col p-1">
                     <div class="md-form">
                         <input type="number" id="espessura" class="form-control text-light">
                         <label class="text-light" for="espessura">Espessura</label>
-                     </div>
+                    </div>
                 </div>
             </div>
 
-           </div>
-           <br>
-          
-           <br>
-           <div class="row">
+        </div>
+        <br>
+
+        <br>
+        <div class="row">
             <div class="col">
-                <button id="adicionar" style="width: 100%;" type="button" class="fixed-bottom text-dark btn btn-secondary">Adicionar</button>
+                <button id="adicionar" style="width: 100%;" type="button"
+                    class="fixed-bottom text-dark btn btn-secondary">Adicionar</button>
             </div>
-           </div>
-           <br>
-           <br>
-            
+        </div>
+        <br>
+        <br>
+
         </form>
     </div>
 </body>

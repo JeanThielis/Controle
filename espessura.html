@@ -1,20 +1,27 @@
 <body>
-    <script src="scriptDefeitos.js"></script>
+    <script src="scriptEspessura.js"></script>
     <script src="script.js"></script>
+    <script src="mask.js"></script>
+
 
 
     <div class="container-fluid">
        
-        <div class="row  bg-info text-dark p-2 fixed-top">
+        <div class="row  bg-light text-dark p-2 fixed-top">
             <div class="col">
                 <i id="index.html" class=" menu fas fa-arrow-left"></i>
                 <label id="index.html" class="menu">Voltar</label>
             </div>
             <div class="col">
                 <strong id="visualizar-check" class="position-relative">
-                    Defeitos
-                   
+                    Espessura
                 </strong>
+
+
+                <span for="visualizar-check" id="tamanho-lista"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                    0
+                </span>
               
             </div>
             <div class="col">
@@ -84,56 +91,44 @@
            </div>
 
         <div  class="alert corFundo">
-        <strong class="text-light">Defeitos encontrado no Extra</strong>
+        <strong class="text-light">Analíse da Espessura</strong>
             <div class="row">
                 <div class="col">
                     <div class="md-form">
-                        <input id="defeitos" name="defeitos" type="text" class="form-control text-light">
-                        <label class="text-light" for="defeitos">Defeitos</label>
+                        <input id="espessuraNominal" name="espessuraNominal" type="text" class="form-control text-light">
+                        <label class="text-light" for="espessuraNominal">Espessura Nominal</label>
                     </div>
                 </div>
             </div>    
             <div class="row">
                 <div class="col">
+                    <br>
+                    <br>
+                    <br>
                     <div class="md-form">
-                        <input type="number" id="vistoriadas" name="vistoriadas" type="text" class="form-control text-light">
-                        <label class="text-light" for="vistoriadas">Total Peças Vistoriadas</label>
+                        <input type="tel" id="prenca" name="vistoriadas" type="text" class="form-control text-light">
+                        <label class="text-light" for="prenca">Prença/Cavidade</label>
                     </div>
                 </div>
-
+                <div class="col">
+                    <div class="md-form">
+                        <input type="number" id="lado1" name="vistoriadas" type="text" class="form-control text-light">
+                        <label class="text-light" for="lado1">Lado 1</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="number" id="lado2" name="vistoriadas" type="text" class="form-control text-light">
+                        <label class="text-light" for="lado2">Lado 2</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="number" id="lado3" name="vistoriadas" type="text" class="form-control text-light">
+                        <label class="text-light" for="lado3">Lado 3</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="number" id="lado4" name="vistoriadas" type="text" class="form-control text-light">
+                        <label class="text-light" for="laod4">Lado 4</label>
+                    </div>
+                </div>
             </div>    
-                
-            <div class="row">
-                    <div class="col">
-                        <div class="md-form">
-                            <input type="number" id="encontrada" name="encontrada" type="text" class="form-control text-light">
-                            <label class="text-light" for="encontrada">Total Defeitos Encontrado</label>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-        </div>
-
-
-        <div class="alert corFundo">
-            <strong class="text-light">Resultado</strong>
-            <div class="row">
-                <div class="col">
-                   
-                </div>
-                <div class="col">
-                   
-                </div>
-                <div class="col">
-                    <h1 class="text-info" id="resultadoDefeitos">
-                        0%
-                    </h1>
-                </div>
-            </div>
-            <textarea style="display: none;" name="textResultado" id="textResultado" cols="30" rows="10"></textarea>
         </div>
         <br>
         <div class="row">
@@ -148,13 +143,21 @@
         <br>
         <div class="row">
             <div class="col">
-                <button class="btn btn-info fixed-bottom text-dark"  id="calcular" style="display: block; width: 100%;">
-                    <label>Calcular</label>
+                <div style="display: none;" id="alertSucesso" class="alert alert-success" role="alert">
+                    <i class="fas fa-check-circle"></i>
+
+                    <strong> Dados inseridos com sucesso !!!</strong>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-light fixed-bottom text-dark"  id="adicionarEspessura" style=" width: 100%;">
+                    <label>Adicionar</label>
                 </button>
 
-                <button class="btn btn-success fixed-bottom text-dark" id="enviar" style="display: none; width: 100%;">
-                    <a for="enviar" class="text-dark" id="compartilhar">Enviar</a>
-                </button>
+                
 
             </div>
         </div>

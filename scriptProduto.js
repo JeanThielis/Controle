@@ -9,7 +9,7 @@ $(document).ready(function () {
             case 2:
                 $("#form-tonalidade").css("display","block");
                 situacao = valor;
-                icon="❌";
+                icon= "❌";
                 break;
             case 1: 
                 $("#form-tonalidade").css("display","block");
