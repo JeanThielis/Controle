@@ -1,8 +1,7 @@
 $(document).ready(function () {
-    obj = Object();
-    array = Array();
     arrayResultado = Array();
-    relatorio="";
+    vetorNovo=Array();
+    
     
     $("#result-analise").change(function(){
          valor = parseInt($(this).val());
@@ -22,6 +21,8 @@ $(document).ready(function () {
                 $("#form-tonalidade").css("display","none");
                 situacao = valor;
                 icon = "✅";
+                $("#justificativa").val(" ");
+
                 break;
             default:
                 $("#form-tonalidade").css("display","none");
@@ -32,30 +33,43 @@ $(document).ready(function () {
 
     });
     $("#adiconar-produto").click(function(){
+        var responsavel = $("#responsavel").val();
+        var equipe = $("#equipe").val();
+        var referencia = $("#referencia").val();
+        var lote = $ ("#lote").val();
+        var linha = $ ("#linha").val();
+
+
          analise = $("#analise").val();
          jst = $("#justificativa").val();
 
+         cabecalho = "\n*Análise de Espessura*" +
+         "\n*Responsável:* " + responsavel +
+         "\n*Equipe:* " + equipe +
+         "\n*Data:* " + data_nova + "\n" +
+         "\n*Linha:* " + linha +
+         "\n*Referência:* " + referencia +
+         "\n*Lote:* " + lote +
+         "\n\n";
 
-        obj = {analise:analise,situacao:situacao,jst:jst,icon:icon};
-        array.push(obj);
-        
-        function compare(a,b) {
-          if (a.situacao < b.situacao)
-             return -1;
-          if (a.situacao > b.situacao)
-            return 1;
-          return 0;
-        }
-        array.sort(compare);
-        for (let index = 0; index < array.length; index++) {
-            relatorio = array[index].icon+" "+array[index].analise+": \n"+array[index].jst+"\n\n";
-            arrayResultado.push(relatorio);
-            break;
-            
-        }
-        $("#resultado-produto").val(" ");
-        $("#resultado-produto").val(arrayResultado);
+         relatorio = icon+" *"+analise+"* :\n"+jst+"\n";
+         arrayResultado.push(relatorio);
+         vetorNovo = arrayResultado.join('');
+         $("#resultado-produto").val(vetorNovo+"*Obs:* ");
+        $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*");
 
 
     })
+    $("#enviarProduto").click(function(){
+        try {
+        resultado=$("#resultado-produto2").val();
+        conteudo = encodeURIComponent(resultado);
+        document.getElementById('compartilharProduto').href="https://api.whatsapp.com/send?text="+conteudo;
+        } catch (error) {
+          alert("deu ruim");
+
+        }
+       
+    })
+   
 });

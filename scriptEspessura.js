@@ -30,14 +30,14 @@ $("#adicionarEspessura").click(function () {
     if (media < min || media > max ){icon = "❌"}
     else{icon = "✅";}
 
-    cabecalho =    "\n*Análise de Espessura*"+  
-    "\n*Responsável:* " +responsavel+
-    "\n*Equipe:* "+equipe+
-    "\n*Data:* "+data_nova+"\n"+
-    "\n*Linha:* "+linha+
-    "\n*Referência:* "+ referencia+
-    "\n*Lote:* "+ lote+
-    "\n\n";
+    cabecalho = "\n*Análise de Espessura*" +
+        "\n*Responsável:* " + responsavel +
+        "\n*Equipe:* " + equipe +
+        "\n*Data:* " + data_nova + "\n" +
+        "\n*Linha:* " + linha +
+        "\n*Referência:* " + referencia +
+        "\n*Lote:* " + lote +
+        "\n\n";
     
     relatorio = prenca+" : "+media.toFixed(2)+" "+icon+"\n";
 
