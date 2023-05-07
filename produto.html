@@ -1,5 +1,6 @@
 <body>
     <script src="scriptProduto.js"></script>
+    <script src="script.js"></script>
 
 
     <div class="container-fluid">
@@ -45,6 +46,7 @@
                         <option value="0">Selecione</option>
                         <option>Equipe 1</option>
                         <option>Equipe 2</option>
+                        <option>Equipe 3</option>
                         <option>Equipe 4</option>
                     </select>
                 </div>
@@ -84,333 +86,52 @@
 
            <div class="alert corFundo">
 
-            <div class="row">
-                <div class="col-4">
-                    <strong id="stg-tonalidade" class="text-light">Tonalidade</strong>
+                <div class="row">
+                    <div class="col">
+                        <select class="bordaSelect form-control text-light" name="analise" id="analise">
+                            <option value=" ">Selecione</option>
+                            <option>Borda Amarela</option>
+                            <option>Brilho</option>
+                            <option>Carregamento de Massa</option>
+                            <option>Deformação</option>
+                            <option>Marca de Grelha</option>
+                            <option>Tonalidade</option>
+                            <option>Textura</option>
+                            <option>Variação de Brilho</option>                            
+                        </select>
 
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value=" ">Selecione</option>
-                        <option value="2">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="0">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
+                    </div>
+                    <div class="col">
+                        <select class="bordaSelect form-control text-light" name="result-analise" id="result-analise">
+                            <option value=" ">Selecione</option>
+                            <option value="2">Fora do Padrão</option>
+                            <option value="1">Atenção</option>
+                            <option value="0">Dentro do Padrão </option>
+                            
+                        </select>
+                    </div>
+                    </div>
             
+                <div class="row">
+                    <div class="col">
+                        <div  style="display: none;" id="form-tonalidade" class="md-form">
+                            <input  type="text" id="justificativa" class="form-control text-light">
+                            <label class="text-light" for="obs-tonalidade">Justificativa</label>
+                        </div>
+                    </div>
+                </div>
+                            
            </div>
-           <div class="alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Textura</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
+           <div class="row">
+            <div class="col">
+                <textarea name="" id="resultado-produto" cols="40" rows="15"></textarea>
             </div>
-
-            <br>
-            
            </div>
-           <div class="alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Brilho</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
           
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
-            
-           </div>
-           <div class="alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Borda Amarela</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
-            
-           </div>
-           <div class="alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Macha D'água</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
-            
-           </div>
-           <div class="alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Lascamento</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
-            
-           </div>
-           <div class="alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Marca de Grelha</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
-            
-           </div>
-           <div class="alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Deformação</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
-            
-           </div>
-           <div class=" alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Carregamento de Massa</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
-            
-           </div>
-           <div class="alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Polimento</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
-            
-           </div>
-
-           <div class="alert corFundo">
-
-            <div class="row">
-                <div class="col-4">
-                    <strong class="text-light">Variação de Brilho</strong>
-
-                </div>
-                <div class="col-8">
-                    <select class="bordaSelect form-control text-light" name="tonalidade" id="tonalidade">
-                        <option value="0">Fora do Padrão</option>
-                        <option value="1">Atenção</option>
-                        <option value="2">Dentro do Padrão </option>
-                        
-                    </select>
-                </div>
-                </div>
-          
-            <div class="row">
-                <div class="col">
-                    <div  style="display: none;" id="form-tonalidade" class="md-form">
-                        <input  type="text" id="jst-tonalidade" class="form-control text-light">
-                        <label class="text-light" for="obs-tonalidade">Justificativa</label>
-                     </div>
-                </div>
-            </div>
-
-            <br>
-            
-           </div>
-           <br>
-           <br>
-           <br>
-           <br>
 
            <div class="row">
             <div class="col">
-                <button style="width: 100%;" type="button" class="btn btn-primary text-dark fixed-bottom">Adicionar</button>
+                <button id="adiconar-produto" style="width: 100%;" type="button" class="btn btn-primary text-dark fixed-bottom">Adicionar</button>
             </div>
            </div>
      

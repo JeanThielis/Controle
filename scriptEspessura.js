@@ -10,6 +10,7 @@ $(document).ready(function(){
     function limparDados(){
     $("#lado1,#lado2,#lado3,#lado4,#prenca").val(" ");
     }
+   
 
 $("#adicionarEspessura").click(function () { 
 
@@ -54,9 +55,6 @@ try {
     alert("Erro !!! Entrar em contato com desenvolvedor");
 }
     
-
-
-
 
     console.log("Nominal: "+espessura+"\n"+"min: "+min.toFixed(2)+"\n"+"max: "+max.toFixed(2)+"\n"+"media: "+media.toFixed(2)+" "+icon);
 })

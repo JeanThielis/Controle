@@ -1,9 +1,11 @@
 $(document).ready(function () {
     obj = Object();
-    vetor = Array();
+    array = Array();
+    arrayResultado = Array();
+    relatorio="";
     
-    $("#tonalidade").change(function(){
-        var valor = parseInt($(this).val());
+    $("#result-analise").change(function(){
+         valor = parseInt($(this).val());
 
         switch (valor) {
             case 2:
@@ -27,8 +29,15 @@ $(document).ready(function () {
         }
 
 
-        obj = {analise:"tonalidade",situacao:situacao,icon:icon};
-        vetor.push(obj);
+
+    });
+    $("#adiconar-produto").click(function(){
+         analise = $("#analise").val();
+         jst = $("#justificativa").val();
+
+
+        obj = {analise:analise,situacao:situacao,jst:jst,icon:icon};
+        array.push(obj);
         
         function compare(a,b) {
           if (a.situacao < b.situacao)
@@ -37,7 +46,16 @@ $(document).ready(function () {
             return 1;
           return 0;
         }
-        console.log(vetor.sort(compare));
+        array.sort(compare);
+        for (let index = 0; index < array.length; index++) {
+            relatorio = array[index].icon+" "+array[index].analise+": \n"+array[index].jst+"\n\n";
+            arrayResultado.push(relatorio);
+            break;
+            
+        }
+        $("#resultado-produto").val(" ");
+        $("#resultado-produto").val(arrayResultado);
 
-    });
+
+    })
 });
