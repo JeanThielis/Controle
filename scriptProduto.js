@@ -43,8 +43,8 @@ $(document).ready(function () {
          analise = $("#analise").val();
          jst = $("#justificativa").val();
 
-         cabecalho = "\n*Análise de Espessura*" +
-         "\n*Responsável:* " + responsavel +
+         cabecalho = "\n*Atualização do Produto em Processo*" +
+         "\n\n*Responsável:* " + responsavel +
          "\n*Equipe:* " + equipe +
          "\n*Data:* " + data_nova + "\n" +
          "\n*Linha:* " + linha +
@@ -52,7 +52,7 @@ $(document).ready(function () {
          "\n*Lote:* " + lote +
          "\n\n";
 
-         relatorio = icon+" *"+analise+"* :\n"+jst+"\n";
+         relatorio = icon+" *"+analise+"*:\n"+jst+"\n";
          arrayResultado.push(relatorio);
          vetorNovo = arrayResultado.join('');
          $("#resultado-produto").val(vetorNovo+"*Obs:* ");
