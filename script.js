@@ -4,6 +4,10 @@ $(document).ready(function(){
     vetorResultado = Array();
     data = new Date();
     data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
+
+    function exibirPrincipal(){
+        $("#principal").fadeIn(1000);
+    }
    
     function alertConfirm(tipo,titulo,mensagem,time){
         Swal.fire({
