@@ -64,7 +64,7 @@ $(document).ready(function () {
         }                    
          
     });
-    $("#vistoriadas,#defeitos,#encontrada").click(function(){
+    $("#vistoriadas,#defeitos,#encontrada,#referencia").click(function(){
         $("#enviar").css('display','none');
         $("#calcular").css('display','block');
     });

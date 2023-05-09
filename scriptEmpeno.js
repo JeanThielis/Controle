@@ -87,7 +87,6 @@ $(document).ready(function () {
     "\n *Lado B:* "+ladob+
     "\n *Lado C:* "+ladoc+
     "\n *Lado D:* "+ladod+
-    "\n"+
     "\n *Central*"+
     "\n *Lado A:* "+centrala+
     "\n *Lado B:* "+centralb+

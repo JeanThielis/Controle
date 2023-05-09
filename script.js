@@ -1,10 +1,10 @@
 
 $(document).ready(function(){
+
     vetorResultado = Array();
     data = new Date();
     data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
-    
-
+   
     function alertConfirm(tipo,titulo,mensagem,time){
         Swal.fire({
             title: titulo,
@@ -77,7 +77,7 @@ $(document).ready(function(){
          var espessura = $("#espessura").val();
 
 
-         cabecalho =    "\n*Relatório de Empeno*"+  
+         cabecalho =    "\n*Relatório de Inicio do Turno*"+  
          "\n*Responsável:* " +responsavel+
          "\n*Equipe:* "+equipe+
          "\n*Data:* "+data_nova+"\n\n";

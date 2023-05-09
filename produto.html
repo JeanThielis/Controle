@@ -1,6 +1,7 @@
 <body>
     <script src="scriptProduto.js"></script>
     <script src="script.js"></script>
+    
 
 
     <div class="container-fluid">
@@ -89,8 +90,8 @@
                     <div class="col">
                         <select class="bordaSelect form-control text-light" name="analise" id="analise">
                             <option value=" ">Selecione</option>
-                            <option>Borda Amarela</option>
-                            <option>Brilho</option>
+                            <option id="bordaAmarela">Borda Amarela</option>
+                            <option id="Brilho">Brilho</option>
                             <option>Carregamento de Massa</option>
                             <option>Deformação</option>
                             <option>Marca de Grelha</option>
@@ -108,9 +109,10 @@
                     <div class="col">
                         <select class="bordaSelect form-control text-light" name="result-analise" id="result-analise">
                             <option value=" ">Selecione</option>
-                            <option value="2">Fora do Padrão</option>
-                            <option value="1">Atenção</option>
                             <option value="0">Dentro do Padrão </option>
+                            <option value="1">Atenção</option>
+                            <option value="2">Fora do Padrão</option>
+
                             
                         </select>
                     </div>
@@ -138,8 +140,14 @@
           
 
            <div class="row">
-            <div class="float-sm-left col">
-                <button id="adiconar-produto" style="width: 100%;" type="button" class="btn btn-primary text-dark fixed-bottom">Adicionar</button>
+            <div class="col-4">
+              
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4">
+                <button id="adiconar-produto"  type="button" class="rounded-circle btn btn-primary text-dark p-3 myBtn">
+                    <i class="fas fa-2x fa-plus"></i>
+                </button>
             </div>
            </div>
      

@@ -1,8 +1,10 @@
 $(document).ready(function () {
     arrayResultado = Array();
     vetorNovo=Array();
+    arrayAnalise=Array();
+   
     
-    
+
     $("#result-analise").change(function(){
          valor = parseInt($(this).val());
 
@@ -32,7 +34,7 @@ $(document).ready(function () {
 
 
     });
-    $("#adiconar-produto").click(function(){
+        $("#adiconar-produto").click(function(){
         var responsavel = $("#responsavel").val();
         var equipe = $("#equipe").val();
         var referencia = $("#referencia").val();
@@ -57,6 +59,7 @@ $(document).ready(function () {
          vetorNovo = arrayResultado.join('');
          $("#resultado-produto").val(vetorNovo+"*Obs:* ");
         $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*");
+        $("#bordaAmarela").css('display','none');
 
 
     })

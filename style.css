@@ -1,7 +1,18 @@
 .bordaSelect{
     border-radius: 0rem; border-color: rgb(212, 212, 212);border-left: none;border-top: none;border-right: none;
-    background-color: rgb(39, 38, 38);
+    background-color: transparent;
 }
 .corFundo{
-    background-color: rgb(39, 38, 38);
+    background-color: #1f1e31;
 }
+.myBtn {
+    position: fixed;
+    bottom: 7%;
+    right: 2%;
+    z-index: 9999;
+
+  }
+  body{
+    background-color: #181627;
+    
+  }
