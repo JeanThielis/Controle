@@ -1,5 +1,9 @@
 $(document).ready(function(){
     vetor=[];
+    tamanhoVetor();
+    function tamanhoVetor(){
+        $("#tamanho-lista").html(vetor.length);
+    }
 
     $("#espessuraNominal,#lado1,#lado2,#lado3,#lado4").mask("0.00");
     $("#prenca").mask("P0/C0");
@@ -10,6 +14,17 @@ $(document).ready(function(){
     function limparDados(){
     $("#lado1,#lado2,#lado3,#lado4,#prenca").val(" ");
     }
+
+    function alertConfirm(tipo,titulo,mensagem,time){
+        Swal.fire({
+            title: titulo,
+            icon: tipo,
+            text:mensagem,
+            showConfirmButton: false,
+            timer: time
+          })
+    
+       };
    
 
 $("#adicionarEspessura").click(function () { 
@@ -41,22 +56,19 @@ $("#adicionarEspessura").click(function () {
     
     relatorio = prenca+" : "+media.toFixed(2)+" "+icon+"\n";
 
-
-try {
+if (media!=null){
     vetor.push(relatorio);
-    vetorNovo = vetor.join('');
-    $("#tamanho-lista").html(vetor.length);
-    $("#alertSucesso").fadeIn();
-    setTimeout(fecharAlert,3000);
-    limparDados();
-
-    
-} catch (error) {
-    alert("Erro !!! Entrar em contato com desenvolvedor");
 }
-    
-
-    console.log("Nominal: "+espessura+"\n"+"min: "+min.toFixed(2)+"\n"+"max: "+max.toFixed(2)+"\n"+"media: "+media.toFixed(2)+" "+icon);
+else{
+    vetor.push(" ");
+}
+vetorNovo = vetor.join('');
+$("#alertSucesso").fadeIn();
+$("#amostra-espessura").html(prenca+": "+media.toFixed(2)+""+icon);
+setTimeout(fecharAlert,3000);
+limparDados();
+tamanhoVetor();
+   
 })
 
 $("#visualizar-check").click(function(){
@@ -69,5 +81,16 @@ $("#visualizar-check").click(function(){
         }
     });         
 });
+$("#enviar").click(function(){
+    try {
+    resultado=$("#textResultado").val();
+    conteudo = encodeURIComponent(resultado);
+    document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
+    } catch (error) {
+      alert("deu ruim");
+
+    }
+   
+})
 
 })

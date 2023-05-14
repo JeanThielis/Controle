@@ -2,8 +2,9 @@ $(document).ready(function () {
     arrayResultado = Array();
     vetorNovo=Array();
     arrayAnalise=Array();
+    icon=" ";
    
-    
+  
 
     $("#result-analise").change(function(){
          valor = parseInt($(this).val());
@@ -58,8 +59,10 @@ $(document).ready(function () {
          arrayResultado.push(relatorio);
          vetorNovo = arrayResultado.join('');
          $("#resultado-produto").val(vetorNovo+"*Obs:* ");
-        $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*");
-        $("#bordaAmarela").css('display','none');
+         $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*");
+         $("#justificativa").val(" ");
+
+         excluirAnalise();
 
 
     })
