@@ -11,20 +11,16 @@ $(document).ready(function () {
 
         switch (valor) {
             case 2:
-                $("#form-tonalidade").css("display","block");
                 situacao = valor;
                 icon= "❌";
                 break;
             case 1: 
-                $("#form-tonalidade").css("display","block");
                 situacao = valor;
                 icon = '⚠️';
                 break;
             case 0:
-                $("#form-tonalidade").css("display","none");
                 situacao = valor;
                 icon = "✅";
-                $("#justificativa").val(" ");
 
                 break;
             default:

@@ -3,7 +3,10 @@ $(document).ready(function(){
 
     vetorResultado = Array();
     data = new Date();
-    data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
+    dia = data.getDate();
+    mes = data.getMonth()+1;
+    ano = data.getFullYear();
+    data_nova= dia+"/"+mes+"/"+ano;
 
     function alertConfirm(tipo,titulo,mensagem,time){
         Swal.fire({
