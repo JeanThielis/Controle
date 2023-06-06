@@ -37,6 +37,7 @@ $(document).ready(function () {
         var referencia = $("#referencia").val();
         var lote = $ ("#lote").val();
         var linha = $ ("#linha").val();
+        var situacao = $("#situacao").val();
 
 
          analise = $("#analise").val();
@@ -49,6 +50,7 @@ $(document).ready(function () {
          "\n*Linha:* " + linha +
          "\n*Referência:* " + referencia +
          "\n*Lote:* " + lote +
+         "\n*Situação:* "+ situacao +
          "\n\n";
 
          relatorio = icon+" *"+analise+"*:\n"+jst+"\n";
