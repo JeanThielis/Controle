@@ -10,17 +10,21 @@ $(document).ready(function () {
          valor = parseInt($(this).val());
 
         switch (valor) {
+            case 3:
+                situacao = valor;
+                icon = "🔴";
+                break;
             case 2:
                 situacao = valor;
-                icon= "❌";
+                icon = "🟠";
                 break;
             case 1: 
                 situacao = valor;
-                icon = '⚠️';
+                icon = "🟡";
                 break;
             case 0:
                 situacao = valor;
-                icon = "✅";
+                icon = "🟢";
 
                 break;
             default:
