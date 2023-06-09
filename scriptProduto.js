@@ -56,12 +56,18 @@ $(document).ready(function () {
          "\n*Lote:* " + lote +
          "\n*Situação:* "+ situacao +
          "\n\n";
+         legenda = "\n\n\n*Legenda*\n\n"+
+                    "🟢 = Liberado, dentro do padrão\n\n"+
+                    "🟡 = Liberado, porém precisa de melhora\n\n"+
+                    "🟠 = Liberado, com documento\n\n"+
+                    "🔴 = Liberado, com restrição\n\n";
+
 
          relatorio = icon+" *"+analise+"*:\n"+jst+"\n";
          arrayResultado.push(relatorio);
          vetorNovo = arrayResultado.join('');
          $("#resultado-produto").val(vetorNovo+"*Obs:* ");
-         $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*");
+         $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*"+legenda);
          $("#justificativa").val(" ");
 
          excluirAnalise();
