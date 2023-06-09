@@ -59,8 +59,8 @@ $(document).ready(function () {
          legenda = "\n\n\n*Legenda*\n\n"+
                     "🟢 = Liberado, dentro do padrão\n\n"+
                     "🟡 = Liberado, porém precisa de melhora\n\n"+
-                    "🟠 = Liberado, com documento\n\n"+
-                    "🔴 = Liberado, com restrição\n\n";
+                    "🟠 = Liberado com documento\n\n"+
+                    "🔴 = Liberado com restrição\n\n";
 
 
          relatorio = icon+" *"+analise+"*:\n"+jst+"\n";
