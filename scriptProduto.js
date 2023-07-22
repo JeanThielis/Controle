@@ -64,7 +64,6 @@ $(document).ready(function () {
          $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*");
          $("#justificativa").val(" ");
 
-         excluirAnalise();
 
 
     })
@@ -79,5 +78,6 @@ $(document).ready(function () {
         }
        
     })
+   
    
 });
