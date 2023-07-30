@@ -17,7 +17,17 @@
        <!-- Your custom styles (optional) -->
        <link rel="stylesheet" href="style.css">
    </head>
-   <body>
+   <style>
+    .vidro{
+        background: rgba(255, 253, 254, 0.35);
+        box-shadow: 0 8px 32px 0 rgba(252, 253, 255, 0.37);
+        backdrop-filter: blur( 9px );-webkit-backdrop-filter: blur( 9px );border-radius: 10px;
+        border: 1px solid rgba(235, 227, 227, 0.979);
+        width: 100%;
+
+    }
+   </style>
+   <body background="fundo4.png">
     <div  id="principal" class="conteiner">
         <div id="resultado">
         <br>
@@ -28,14 +38,14 @@
        
        <div class="row p-2">
             <div class="col-6">
-                <button id="check.html" style="width: 95%;border-top-right-radius:1rem;border-bottom-left-radius: 1rem;" type="button" class=" menu btn btn-outline-secondary">
+                <button id="check.html" type="button" class=" menu vidro btn ">
                     <i class=" fas fa-3x fa-clipboard-list"></i>
                     <br>
                     CheckList
                 </button>
             </div>
             <div class="col-6">
-                <button id="empeno.html" style="width: 95%; border-bottom-right-radius: 1rem;border-top-left-radius: 1rem;" type="button" class="menu btn btn-outline-success">
+                <button id="empeno.html" type="button" class="menu btn vidro">
                     <i class="fas fa-3x fa-ruler-combined"></i>
                     <br>
                     Empeno
@@ -47,14 +57,14 @@
 
        <div class="row p-2">
             <div class="col-6">
-                <button id="defeitos.html" style="width: 95%; border-top-right-radius: 1rem;border-bottom-left-radius: 1rem;" type="button" class="menu btn btn-outline-info">
+                <button id="defeitos.html"  type="button" class="menu btn vidro">
                     <i class="fas fa-3x fa-chart-line"></i>
                     <br>
                     Defeitos
                 </button>
             </div>
             <div class=" col-6 ">
-                <button id="produto.html" style="width: 95%; border-bottom-right-radius: 1rem;border-top-left-radius: 1rem;" type="button" class="menu btn btn-outline-primary">
+                <button id="produto.html"  type="button" class="menu btn vidro">
                     <i class="fas fa-3x fa-retweet"></i>
                     <br>
                     Produto
@@ -66,14 +76,14 @@
 
         <div class="row p-3">
             <div class="col-6">
-                <button id="final.html" style="width: 100%; border-top-right-radius: 1rem;border-bottom-left-radius: 1rem;" class="menu btn btn-outline-warning">
+                <button id="final.html"  class="menu btn vidro">
                     <i class="fas fa-3x fa-check"></i>
                     <br>
                     Final
                 </button>
             </div>
             <div class="col-6">
-                <button id="espessura.html" style="width: 100%; border-bottom-right-radius: 1rem;border-top-left-radius: 1rem;" class="menu btn btn-outline-light">
+                <button id="espessura.html"  class="menu btn vidro">
                     <i class="fas fa-3x fa-ruler-vertical"></i><br>
                     Espessura
                 </button>
