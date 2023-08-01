@@ -2,8 +2,13 @@
     border-radius: 0rem; border-color: rgb(212, 212, 212);border-left: none;border-top: none;border-right: none;
     background-color: transparent;
 }
+
 .corFundo{
-    background-color: #1f1e31;
+    background-color: #292929;
+}
+.cabecalho{
+  background: rgba(102,0,0,1.0);
+  color: white;
 }
 .myBtn {
     position: fixed;
@@ -13,9 +18,23 @@
 
   }
   body{
-    background-color: #181627;
-    
+  background-image: url('fundo.png');
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
   }
+  .vidro{
+    background: rgba( 102, 0, 0, 0.8 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 100%;
+    color: white;
+
+}
 #principal{
   animation-duration: 1s;
   animation-name: slidein;
