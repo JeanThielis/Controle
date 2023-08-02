@@ -3,7 +3,7 @@
     <script src="scriptFinal.js"></script>
 
     <div class="container-fluid transicao">
-        <div class="row  bg-warning text-dark p-2 fixed-top">
+        <div class="row  cabecalho text-light p-2 fixed-top">
             <div class="col">
                 <i id="index.html" class=" menu fas fa-arrow-left"></i>
                 <label id="index.html" class="menu">Voltar</label>
@@ -79,25 +79,50 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <label class="text-light">Condição:</label>
+                    <select class="bordaSelect form-control text-light" name="result-analise" id="result-analise">
+                        <option>Selecione</option>
+                        <option>Liberado Normalmente</option>
+                        <option>Liberado com Documento</option>
+                        <option>Liberado com Restrição</option>
+                        <option>Material Retido</option>
+     
+                    </select>
+                </div>
+            </div>
 
            </div>
 
-        <div class="alert corFundo">
+        <div  class="alert corFundo">
             <div class="row">
                 <div class="col">
-                    <label class="text-light">Informações do Produto</label>
+                    <label class="text-light">Informações do Turno</label>
                 </div>
-                <div class="col"></div>
+                
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input confirm" id="deformacao">
-                        <label id="lbl-deformacao" style="color: #FF6172;" class="custom-control-label" for="deformacao">Deformação</label>
-                    </div>
+                    <textarea style="width: 100%; height: 400%;"  class="form-control" name="relatorio"></textarea>
                 </div>
-                <div class="col"></div>
             </div>
-        </div>           
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+           
+        </div> 
+        <div class="row">
+            <div class="col">
+                <button id="adicionarRelatorio" type="button" class="myBtn rounded-circle text-dark p-3 btn text-light cabecalho">                    
+                    <i class="fas fa-2x fa-plus"></i></button>
+            </div>
+           </div>          
     </div>
 </body>

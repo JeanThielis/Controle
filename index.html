@@ -18,72 +18,90 @@
        <link rel="stylesheet" href="style.css">
    </head>
    <style>
-   
+    .posicaoIcon{
+        position: relative;
+        right: 20px;
+    }
+
+    .labelPosicao{
+        position: relative;
+        right: 12px;
+        font-weight: bold;
+        font-size: 12px;
+    }
    </style>
    <body>
-    <div  id="principal" class="conteiner">
+    <div  id="principal" class="conteiner-fluid">
         <div id="resultado">
         <br>
         <br>
         <br>
         <br>
-
-       
-       <div class="row p-3">
-            <div class="col-6">
-                <button id="check.html" type="button" class=" menu vidro btn ">
-                    <i class=" fas fa-3x fa-clipboard-list"></i>
-                    <br>
-                    CheckList
-                </button>
-            </div>
-            <div class="col-6">
-                <button id="empeno.html" type="button" class="menu btn vidro">
-                    <i class="fas fa-3x fa-ruler-combined"></i>
-                    <br>
-                    Empeno
-                </button>
-            </div>
-       </div>
-       <br>
-
-
-       <div class="row p-3">
-            <div class="col-6">
-                <button id="defeitos.html"  type="button" class="menu btn vidro">
-                    <i class="fas fa-3x fa-chart-line"></i>
-                    <br>
-                    Defeitos
-                </button>
-            </div>
-            <div class=" col-6 ">
-                <button id="produto.html"  type="button" class="menu btn vidro">
-                    <i class="fas fa-3x fa-retweet"></i>
-                    <br>
-                    Produto
-                </button>
-            </div>
-        </div>
+        <br>
+        <br>
         <br>
 
-
-        <div class="row p-3">
-            <div class="col-6">
-                <button id="final.html"  class="menu btn vidro">
-                    <i class="fas fa-3x fa-check"></i>
+       <div style="padding-right: 2rem; padding-left: 1.3rem;" class="conteiner bg-light">
+        <br>
+        <div class="row">
+            <div style="text-align: left;" class="col p-1">
+                <div id="check.html" type="button" class=" menu vidro btn ">
+                    <i  class="posicaoIcon fas fa-3x fa-clipboard-list"></i>
                     <br>
-                    Final
-                </button>
+                    <br>
+                    <label class="labelPosicao">Checklist</label>
+                </div>
             </div>
-            <div class="col-6">
-                <button id="espessura.html"  class="menu btn vidro">
-                    <i class="fas fa-3x fa-ruler-vertical"></i><br>
-                    Espessura
-                </button>
+
+
+            <div class="col p-1">
+                <div id="empeno.html" type="button" class="menu btn vidro">
+                    <i class="posicaoIcon fas fa-3x fa-ruler-combined"></i>
+                    <br>
+                    <br>
+                    <label class="labelPosicao">Empeno</label>
+                </div>
+            </div>
+            <div class="col p-1">
+                <div id="defeitos.html"  type="button" class="menu btn vidro">
+                    <i class=" posicaoIcon fas fa-3x fa-chart-line"></i>
+                    <br>
+                    <br>
+                    <label class="labelPosicao">Defeitos</label>
+                </div>
+            </div>
+       </div>
+
+       <div class="row">
+        <div class=" col p-1">
+            <div id="produto.html"  type="button" class="menu btn vidro">
+                <i class="fas posicaoIcon fa-3x fa-retweet"></i>
+                <br>
+                <br>
+                <label class="labelPosicao">Produto</label>
             </div>
         </div>
-       </div>
-    </div>    
+
+        <div class="col p-1">
+            <div id="final.html"  class="menu btn vidro">
+                <i class="fas posicaoIcon fa-3x fa-check"></i>
+                <br>
+                <br>
+                <label class="labelPosicao">Final</label>
+            </div>
+        </div>
+        <div class="col p-1">
+            <div id="espessura.html"  class="menu btn vidro">
+                <i class="fas posicaoIcon fa-3x fa-ruler-vertical"></i>
+                <br>
+                <br>
+                <Label class="labelPosicao">Espessura</Label>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    </div> 
 </div>
         
    
