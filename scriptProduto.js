@@ -3,7 +3,9 @@ $(document).ready(function () {
     vetorNovo=Array();
     arrayAnalise=Array();
     icon=" ";
-   
+   function limparDados(){
+    $("#referencia,#lote,#linha,#situacao,#resultado-produto2").val();
+   }
   
 
     $("#result-analise").change(function(){
@@ -35,34 +37,34 @@ $(document).ready(function () {
 
 
     });
-        $("#adiconar-produto").click(function(){
-        var responsavel = $("#responsavel").val();
-        var equipe = $("#equipe").val();
-        var referencia = $("#referencia").val();
-        var lote = $ ("#lote").val();
-        var linha = $ ("#linha").val();
-        var situacao = $("#situacao").val();
+    $("#adiconar-produto").click(function(){
+    var responsavel = $("#responsavel").val();
+    var equipe = $("#equipe").val();
+    var referencia = $("#referencia").val();
+    var lote = $ ("#lote").val();
+    var linha = $ ("#linha").val();
+    var situacao = $("#situacao").val();
 
 
-         analise = $("#analise").val();
-         jst = $("#justificativa").val();
+    analise = $("#analise").val();
+    jst = $("#justificativa").val();
 
-         cabecalho = "\n*Atualização do Produto em Processo*" +
-         "\n\n*Responsável:* " + responsavel +
-         "\n*Equipe:* " + equipe +
-         "\n*Data:* " + data_nova + "\n" +
-         "\n*Linha:* " + linha +
-         "\n*Referência:* " + referencia +
-         "\n*Lote:* " + lote +
-         "\n*Situação:* "+ situacao +
-         "\n\n";
+    cabecalho = "\n*Atualização do Produto em Processo*" +
+    "\n\n*Responsável:* " + responsavel +
+    "\n*Equipe:* " + equipe +
+    "\n*Data:* " + data_nova + "\n" +
+    "\n*Linha:* " + linha +
+    "\n*Referência:* " + referencia +
+    "\n*Lote:* " + lote +
+    "\n*Situação:* "+ situacao +
+    "\n\n";
 
-         relatorio = icon+" *"+analise+"*:\n"+jst+"\n";
-         arrayResultado.push(relatorio);
-         vetorNovo = arrayResultado.join('');
-         $("#resultado-produto").val(vetorNovo+"*Obs:* ");
-         $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*");
-         $("#justificativa").val(" ");
+    relatorio = icon+" *"+analise+"*:\n"+jst+"\n";
+    arrayResultado.push(relatorio);
+    vetorNovo = arrayResultado.join('');
+    $("#resultado-produto").val(vetorNovo+"*Obs:* ");
+    $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*");
+    $("#justificativa").val(" ");
 
 
 
@@ -72,8 +74,9 @@ $(document).ready(function () {
         resultado=$("#resultado-produto2").val();
         conteudo = encodeURIComponent(resultado);
         document.getElementById('compartilharProduto').href="https://api.whatsapp.com/send?text="+conteudo;
+        limparDados();
         } catch (error) {
-          alert("deu ruim");
+          alert("deu ruim acionar o responsável do sistema");
 
         }
        
