@@ -42,6 +42,7 @@ $(document).ready(function () {
     $("#adiconar-produto").click(function(){
     var responsavel = $("#responsavel").val();
     var referencia = $("#referencia").val();
+    var equipe = $("#equipe").val();
     var lote = $ ("#lote").val();
     var linha = $ ("#linha").val();
     var situacao = $("#situacao").val();
