@@ -21,14 +21,14 @@ $(document).ready(function(){
        };
        
 
-       $("#adicionar-nome").click(function(){
+       $("#nome").keyup(function(){
         nome = $("#nome").val();
         localStorage.setItem("nome",nome);
-        $("#lbl-nome").html(localStorage.getItem("nome"));
-        $("#nome").val("");
        });
        function adicionarNome(){
         $("#responsavel").val(localStorage.getItem("nome"));
+        $("#nome").val(localStorage.getItem("nome"));
+
        }
 
 
