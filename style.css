@@ -1,3 +1,14 @@
+
+.menu-container{
+  border-radius: 1rem; 
+  padding-right: 2rem; 
+  padding-left: 1.3rem; 
+  background:rgba(92, 92, 92,1.0);
+  position: relative;
+  bottom: 15px;
+}
+
+
 .bordaSelect{
     border-radius: 0rem; border-color: rgb(212, 212, 212);border-left: none;border-top: none;border-right: none;
     background-color: transparent;
@@ -14,6 +25,13 @@
     position: fixed;
     bottom: 7%;
     right: 2%;
+    z-index: 9999;
+
+  }
+  .myBtnVisualizar {
+    position:relative;
+    bottom:45%;
+    left: 85%;
     z-index: 9999;
 
   }

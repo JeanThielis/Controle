@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
-
+    adicionarNome();
+    horarioEquipe();
     vetorResultado = Array();
     data = new Date();
     dia = data.getDate();
@@ -18,6 +19,39 @@ $(document).ready(function(){
           })
     
        };
+       
+
+       $("#adicionar-nome").click(function(){
+        nome = $("#nome").val();
+        localStorage.setItem("nome",nome);
+        $("#lbl-nome").html(localStorage.getItem("nome"));
+        $("#nome").val("");
+       });
+       function adicionarNome(){
+        $("#responsavel").val(localStorage.getItem("nome"));
+       }
+
+
+       function horarioEquipe(){
+        time = new Date;
+        hora = time.getHours();
+       
+            if(hora>5 && hora<14){
+                $("#equipe").val("1");
+            }
+            else if (hora>13 && hora<22) {
+                $("#equipe").val("2");
+
+            }
+            else if (hora>21 || hora<6) {
+                $("#equipe").val("3");
+            }
+            else{
+                alertConfirm("erros","Xiiii","Tente novamente"+horaCerta,3000);
+
+            }
+          
+    }
     function limparFormulario(){
          $("#linha").val(" ");
         $("#referencia").val(" ");

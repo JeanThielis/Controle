@@ -13,15 +13,7 @@
                 <label id="index.html" class="text-light menu">Voltar</label>
             </div>
             <div class="col">
-                <strong id="visualizar-check" class="position-relative">
                     Espessura
-                </strong>
-
-
-                <span for="visualizar-espessura" id="tamanho-lista"
-                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
-                    0
-                </span>
               
             </div>
             <div class="col">
@@ -34,9 +26,9 @@
         <div  class="alert corFundo">
             <div class="row">
                 <div class="col">
+                    <strong style="position: relative;top: 30px;" class="text-light" for="responsavel">Responsável</strong>
                     <div class="md-form">
                         <input id="responsavel" name="responsavel" type="text" class="form-control text-light">
-                        <label class="text-light" for="responsavel">Responsável</label>
                     </div>
                 </div>
                
@@ -49,11 +41,10 @@
                 <div class="col">
                     <label class="text-light" >Equipe:</label>
                     <select class="bordaSelect form-control  text-light" name="equipe" id="equipe">
-                        <option value="0">Selecione</option>
-                        <option>Equipe 1</option>
-                        <option>Equipe 2</option>
-                        <option>Equipe 3</option>
-                        <option>Equipe 4</option>
+                        <option value="1">Equipe 1</option>
+                        <option value="2">Equipe 2</option>
+                        <option value="3">Equipe 3</option>
+                        <option value="4">Equipe 4</option>
                     </select>
                 </div>
                     <div class="col">
@@ -93,6 +84,14 @@
            </div>
 
         <div  class="alert corFundo">
+            <div class="row">
+                <div class="col">
+                    <button class="myBtnVisualizar rounded-circle text-light p-3 btn btn-primary" id="visualizarEspessura" data-toggle="modal" data-target="#frameModalBottom">                    
+                        <i class="fas fa-2x fa-eye"></i>                
+                    </button>
+                </div>
+            </div>
+           
         <strong class="text-light">Analíse da Espessura</strong>
             <div class="row">
                 <div class="col">
@@ -139,11 +138,7 @@
         <br>
         <div class="row">
             <div class="col">
-                <div style="display: none;" id="alertSucesso" class="alert alert-success" role="alert">
-                    <i class="fas fa-check-circle"></i>
-
-                    <strong> Dados inseridos com sucesso !!!</strong>
-                </div>
+                
             </div>
         </div>
         
@@ -153,9 +148,12 @@
                 <button class="myBtn rounded-circle text-light p-3 btn cabecalho" id="adicionarEspessura">                    
                     <i class="fas fa-2x fa-plus"></i></button>
                 </button>
-
-                
-
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col">
+               
             </div>
         </div>
         <br>
@@ -163,4 +161,36 @@
         <br>
         <br>
     </div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" >
+    Launch demo modal
+  </button>
+  
+  <!-- Frame Modal Bottom -->
+  <div class="modal fade " id="frameModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+  
+    <!-- Add class .modal-frame and then add class .modal-bottom (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-lg " role="document">
+  
+  
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row d-flex justify-content-center align-items-center">
+            
+            <textarea rows="20" cols="30" id="textResultado"></textarea>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+            <div class="col">
+                <a id="compartilhar"><button id="enviarEspessura" type="button" class="btn btn-success">Enviar</button></a>
+            </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Frame Modal Bottom -->
+
 </body>
