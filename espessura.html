@@ -13,8 +13,7 @@
                 <label id="index.html" class="text-light menu">Voltar</label>
             </div>
             <div class="col">
-                    Espessura
-              
+                    <strong>Espessura</strong>
             </div>
             <div class="col">
             </div>
@@ -23,7 +22,7 @@
         <br>
         <br>
 
-        <div  class="alert corFundo">
+        <div  class="alert corFundo" style="display: none;">
             <div class="row">
                 <div class="col">
                     <strong style="position: relative;top: 30px;" class="text-light" for="responsavel">Responsável</strong>
@@ -84,20 +83,13 @@
            </div>
 
         <div  class="alert corFundo">
-            <div class="row">
-                <div class="col">
-                    <button class="myBtnVisualizar rounded-circle text-light p-3 btn btn-primary" id="visualizarEspessura" data-toggle="modal" data-target="#frameModalBottom">                    
-                        <i class="fas fa-2x fa-eye"></i>                
-                    </button>
-                </div>
-            </div>
            
         <strong class="text-light">Analíse da Espessura</strong>
             <div class="row">
                 <div class="col">
                     <div class="md-form">
                         <input id="espessuraNominal" name="espessuraNominal" type="tel" class="form-control text-light">
-                        <label class="text-light" for="espessuraNominal">Espessura Nominal</label>
+                        <label class="text-light" for="espessuraNominal">Espessura da Embalagem</label>
                     </div>
                 </div>
             </div>    
@@ -146,8 +138,16 @@
         <div class="row">
             <div class="col">
                 <button class="myBtn rounded-circle text-light p-3 btn cabecalho" id="adicionarEspessura">                    
-                    <i class="fas fa-2x fa-plus"></i></button>
+                    <i class="fas fa-2x fa-plus"></i>
+                    <span id="tamanho-listaEspessura" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                        0
+                      </span>
                 </button>
+
+                <button style="display:none;" id="btn-visualizarEspessura" type="button"
+                        class="myBtnVi  rounded-circle text-dark p-3 btn btn-indigo" data-toggle="modal" data-target="#frameModalBottom">                    
+                        <i class="fas text-light fa-2x fa-eye"></i>
+                    </button>
             </div>
             
         </div>
@@ -173,13 +173,13 @@
         <div class="modal-body">
           <div class="row d-flex justify-content-center align-items-center">
             
-            <textarea rows="20" cols="30" id="textResultado"></textarea>
+            <textarea style="border: none;" rows="20" cols="30" id="textResultadoEspessura"></textarea>
 
           </div>
         </div>
         <div class="modal-footer">
             <div class="col">
-                <a id="compartilhar"><button id="enviarEspessura" type="button" class="btn btn-success">Enviar</button></a>
+                <a id="compartilhar"><button style="width: 100%;" id="enviarEspessura" type="button" class="btn  btn-dark-green">Enviar</button></a>
             </div>
            
         </div>

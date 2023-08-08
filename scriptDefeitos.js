@@ -2,6 +2,7 @@ $(document).ready(function () {
     vetorDefeitos = Array(1);
     data = new Date();
     data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
+
     function limparDados(){
         $("#referencia").val('');
         $("#lote").val('');
@@ -11,9 +12,18 @@ $(document).ready(function () {
     $("#lote").keyup(function(){
         $(this).val($(this).val().toUpperCase());
       });
-    function fecharAlert(){
-        $("#alertSucesso").fadeOut();
-    }
+
+      function alertConfirm(tipo,titulo,mensagem,time){
+        Swal.fire({
+            title: titulo,
+            icon: tipo,
+            text:mensagem,
+            showConfirmButton: false,
+            timer: time
+          })
+    
+       };
+       
     
     $("#calcular").click(function(){
         var responsavel = $("#responsavel").val();
@@ -49,12 +59,11 @@ $(document).ready(function () {
         try {
             vetorDefeitos.push(relatorioDefeitos);
             $("#textResultado").val(cabecalho+vetorDefeitos);
-    
             $("#resultadoDefeitos").html(resultadoCalculo.toFixed(0)+"%");
-            $("#enviar").css('display','block');
-            $("#calcular").css('display','none');
-            $("#alertSucesso").fadeIn();
-            setTimeout(fecharAlert,3000);
+            $("#enviar").fadeIn('slow');
+            $("#calcular").fadeOut('slow');
+            alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
+
 
             limparDados();
             vetorDefeitos.pop();
@@ -65,8 +74,8 @@ $(document).ready(function () {
          
     });
     $("#vistoriadas,#defeitos,#encontrada,#referencia").click(function(){
-        $("#enviar").css('display','none');
-        $("#calcular").css('display','block');
+        $("#enviar").fadeOut("slow");
+        $("#calcular").fadeIn("slow");
     });
     $("#enviar").click(function(){
         try {

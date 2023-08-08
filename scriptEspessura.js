@@ -54,16 +54,17 @@ $(document).ready(function(){
         vetor.push(relatorio);
         vetorNovo = vetor.join('');
         $("#amostra-espessura").html(prenca+": "+media.toFixed(2)+""+icon);
-        $("#textResultado").val(cabecalho+vetorNovo);
+        $("#tamanho-listaEspessura").html(vetor.length);
+        $("#textResultadoEspessura").val(cabecalho+vetorNovo);
+        $("#btn-visualizarEspessura").fadeIn("slow");
         alertConfirm('success','Legal !','Dados inseridos com Sucesso',3000);
-        setTimeout(fecharAlert,3000);
         limparDados();
     
     })
      
     $("#enviarEspessura").click(function(){
         try {
-        resultado=$("#textResultado").val();
+        resultado=$("#textResultadoEspessura").val();
         conteudo = encodeURIComponent(resultado);
         document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
         } catch (error) {

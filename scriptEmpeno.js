@@ -56,6 +56,8 @@ $(document).ready(function () {
     var equipe = $("#equipe").val();
     var referencia = $("#referencia").val();
     var lote = $ ("#lote").val();
+    var linha = $ ("#linha").val();
+
     var ladoa = $("#ladoa").val();
     var ladob = $("#ladob").val();
     var ladoc = $("#ladoc").val();
@@ -81,6 +83,7 @@ $(document).ready(function () {
     relatorioEmpeno = 
     "\n *Referencia:* "+referencia+
     "\n *Lote:* "+lote+
+    "\n *Linha: "+linha+
     "\n"+
     "\n *Peça (+)*"+
     "\n *Lado A:* "+ladoa+
@@ -102,26 +105,26 @@ $(document).ready(function () {
     "\n *Lado A:* "+centralA+
     "\n *Lado B:* "+centralB+"\n";
 
-    $.ajax({
-        success: function () {
-            vetorEmpeno.push(relatorioEmpeno);
-            vetorNovo = vetorEmpeno.join('_________________________________')
-            $("#tamanho-lista").html(vetorEmpeno.length);
-            alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
-            limparForm();
+    vetorEmpeno.push(relatorioEmpeno);
+    vetorNovo = vetorEmpeno.join('_________________________________')
+    $("#tamanho-lista").html(vetorEmpeno.length);
+    $("#textResultadoEmpeno").val(cabecalho+vetorNovo);
+    $("#btn-visualizarEmpeno").fadeIn("slow");
+    alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
+    limparForm();
 
-        }
-    });
+    
    });
-   $("#visualizar-check").click(function(){
-    $.ajax({
-        url:"telaResultado.html",
-        success: function (response) {
-            $("#resultado").html(response);
-            $("#textResultado").val(cabecalho+vetorNovo);
-            
-        }
-    });         
-});
+   $("#enviarEmpeno").click(function(){
+    try {
+    resultado=$("#textResultadoEmpeno").val();
+    conteudo = encodeURIComponent(resultado);
+    document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
+    } catch (error) {
+        alertConfirm('error','Xiiii','Dados não foram inseridos',3000);
+
+    }
+   
+})
 
 });

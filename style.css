@@ -38,7 +38,7 @@
   body{
   background-image: url('fundo.png');
   background-color: #cccccc; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
+  height: 700px; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   }
@@ -92,4 +92,3 @@
     padding-left: 5%;
   }
 }
-

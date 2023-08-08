@@ -44,13 +44,17 @@ $(document).ready(function(){
        
             if(hora>5 && hora<14){
                 $("#equipe").val("1");
+                $("#usuarioEq").html(' - Equipe 1');
             }
             else if (hora>13 && hora<22) {
                 $("#equipe").val("2");
+                $("#usuarioEq").html(' - Equipe 2');
 
             }
             else if (hora>21 || hora<6) {
                 $("#equipe").val("3");
+                $("#usuarioEq").html(' - Equipe 3');
+
             }
             else{
                 alertConfirm("erros","Xiiii","Tente novamente"+horaCerta,3000);
@@ -139,7 +143,7 @@ $(document).ready(function(){
                         vetorNovo = vetorResultado.join('_________________________________')
                         $("#textResultadoCheck").val(cabecalho+vetorNovo);
                         $("#tamanho-lista").html(vetorResultado.length);
-                        $("#btn-visualizar").css("display","block");
+                        $("#btn-visualizar").fadeIn("slow");
                         alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
                         limparFormulario();
                 } catch (error) {
@@ -154,7 +158,7 @@ $(document).ready(function(){
         conteudo = encodeURIComponent(resultado);
         document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
         } catch (error) {
-          alert("deu ruim"+ error);
+            alertConfirm('error','Xiiii','Dados não foram inseridos',3000)
 
         }
        
