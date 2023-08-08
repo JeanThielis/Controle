@@ -23,15 +23,15 @@
 }
 .myBtn {
     position: fixed;
-    bottom: 7%;
+    bottom: 10%;
     right: 2%;
     z-index: 9999;
 
   }
-  .myBtnVisualizar {
-    position:relative;
-    bottom:45%;
-    left: 85%;
+  .myBtnVi {
+    position:fixed;
+    bottom:0.8%;
+    right: 2%;
     z-index: 9999;
 
   }
@@ -52,6 +52,20 @@
     width: 100%;
     color: white;
 
+}
+.vidroLogin{
+  position: relative;
+  top: 150px;
+  margin:0.8%;
+  padding: 10%;
+  background: rgba(14, 12, 12, 0.6);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  width: 100%;
+  color: white;
 }
 #principal{
   animation-duration: 1s;

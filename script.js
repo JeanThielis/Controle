@@ -24,10 +24,16 @@ $(document).ready(function(){
        $("#nome").keyup(function(){
         nome = $("#nome").val();
         localStorage.setItem("nome",nome);
+        $("#usuario").html(localStorage.getItem("nome"));
+
        });
+       $('#nome').focusout(function(){
+            $(this).val(" ");
+       })
+
        function adicionarNome(){
         $("#responsavel").val(localStorage.getItem("nome"));
-        $("#nome").val(localStorage.getItem("nome"));
+        $("#usuario").html(localStorage.getItem("nome"));
 
        }
 
@@ -69,18 +75,7 @@ $(document).ready(function(){
 
 
     }
-    $("#enviar").click(function(){
-            try {
-            resultado=$("#textResultado").val();
-            conteudo = encodeURIComponent(resultado);
-            document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
-            } catch (error) {
-              alert("deu ruim");
-
-            }
-           
-        })
-       
+   
 
     $(".menu").click(function(){
         var menu=this.id;
@@ -139,26 +134,31 @@ $(document).ready(function(){
                         "\n*Comercial:* "+comercial+
                         "\n*Popular:* "+popular+"\n";               
                         
-                    $.ajax({
-                        success: function () {
-                            vetorResultado.push(resultado);
-                            vetorNovo = vetorResultado.join('_________________________________')
-                            $("#tamanho-lista").html(vetorResultado.length);
-                            alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
-                            limparFormulario();                    
-                            
-                        }
-                    });
-        
+                try {
+                    vetorResultado.push(resultado);
+                        vetorNovo = vetorResultado.join('_________________________________')
+                        $("#textResultadoCheck").val(cabecalho+vetorNovo);
+                        $("#tamanho-lista").html(vetorResultado.length);
+                        $("#btn-visualizar").css("display","block");
+                        alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
+                        limparFormulario();
+                } catch (error) {
+                    alertConfirm('error','Xiiii','Dados não foram inseridos',3000)
+
+                }                                          
+                                               
     });
-    $("#visualizar-check").click(function(){
-        $.ajax({
-            url:"telaResultado.html",
-            success: function (response) {
-                $("#resultado").html(response);
-                $("#textResultado").val(cabecalho+vetorNovo);
-                
-            }
-        });         
-    });
+    $("#enviarCheck").click(function(){
+        try {
+        resultado=$("#textResultadoCheck").val();
+        conteudo = encodeURIComponent(resultado);
+        document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
+        } catch (error) {
+          alert("deu ruim"+ error);
+
+        }
+       
+    })
+   
+    
 });

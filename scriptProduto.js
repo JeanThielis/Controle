@@ -64,8 +64,7 @@ $(document).ready(function () {
     relatorio = icon+" *"+analise+"*:\n"+jst+"\n";
     arrayResultado.push(relatorio);
     vetorNovo = arrayResultado.join('');
-    $("#resultado-produto").val(vetorNovo+"*Obs:* ");
-    $("#resultado-produto2").val(cabecalho + vetorNovo+"*Obs:*");
+    $("#resultado-produto").val(cabecalho + vetorNovo+"*Obs:*");
     $("#justificativa").val(" ");
 
 
