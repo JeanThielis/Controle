@@ -41,13 +41,14 @@ $(document).ready(function(){
     if(observacao!=""){
       vetorRelatorio.push(relatorio);
       resultadoRelatorioNovo = vetorRelatorio.join('_____________________________________');
+      $("#tamanho-lista").html(vetorRelatorio.lenght);
       $("#textResultadoFinal").val(cabecalhoFixo+resultadoRelatorioNovo);
       $("#visualizar-final").fadeIn("slow");
       alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
       limparDados();
 
     }else{
-      alertConfirm('error','Erro','Compo de obersavação vazio',3000);
+      alertConfirm('error','Erro','Campo de obersavação vazio',3000);
       $("#observacao").focus();
     }
     
