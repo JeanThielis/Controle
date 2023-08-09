@@ -83,7 +83,7 @@ $(document).ready(function () {
     relatorioEmpeno = 
     "\n *Referencia:* "+referencia+
     "\n *Lote:* "+lote+
-    "\n *Linha: "+linha+
+    "\n *Linha:* "+linha+
     "\n"+
     "\n *Peça (+)*"+
     "\n *Lado A:* "+ladoa+

@@ -31,7 +31,7 @@ $(document).ready(function(){
         "\n*Equipe:* " + equipe +
         "\n*Data:* " + data_nova;
 
-    cabecalhoVariavel ="\n*Linha:* " + linha +
+    relatorio ="\n*Linha:* " + linha +
         "\n*Referência:* " + referencia +
         "\n*Lote:* " + lote +
         "\n*Situação:* "+ situacao+
@@ -39,8 +39,8 @@ $(document).ready(function(){
         "\n";
 
 
-    vetorRelatorio.push(cabecalhoVariavel);
-    resultadoRelatorioNovo = vetorRelatorio.join('');
+    vetorRelatorio.push(relatorio);
+    resultadoRelatorioNovo = vetorRelatorio.join('____________________________________________');
     $("#resultadoFinal").val(cabecalhoFixo+resultadoRelatorioNovo);
     alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
     limparDados();

@@ -31,6 +31,8 @@ $(document).ready(function () {
         var referencia = $("#referencia").val();
         var lote = $ ("#lote").val();
         var linha = $ ("#linha").val();
+        var tamanho = $("#tamanho").val();
+        var esquadro= $("#esquadro").val();
 
 
         var defeitos = $("#defeitos").val();
@@ -55,7 +57,10 @@ $(document).ready(function () {
                             "*Defeitos:* "+defeitos+
                             "\n*Quantidade Vistoridas:* "+vistoriada+
                             "\n*Quantidade de Defeitos:* "+encontrada+
-                            "\n*Porcentagem:* "+resultadoCalculo.toFixed(0)+"%";
+                            "\n*Porcentagem:* "+resultadoCalculo.toFixed(0)+"%"+
+                            "\n*Tamanho:* "+tamanho+"mm"+
+                            "\n*Esquadro:* "+esquadro+"mm";
+
         try {
             vetorDefeitos.push(relatorioDefeitos);
             $("#textResultado").val(cabecalho+vetorDefeitos);
