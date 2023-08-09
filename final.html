@@ -110,25 +110,52 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <textarea cols="10" rows="8" class="form-control" id="relatorio" name="relatorio"></textarea>
+                    <textarea cols="10" rows="8" class="form-control" id="observacao" name="relatorio"></textarea>
                 </div>
-            </div>
-            <hr>
-           
-            <div class="row">
-                <div class="col">
-                    <label class="text-light">Resultado</label>
-                    <textarea cols="10" rows="15" class="form-control" id="resultadoFinal" name="resultadoFinal" disabled ></textarea>
-
-                </div>
-            </div>
+            </div>           
             
         </div> 
         <div class="row">
             <div class="col">
                 <button id="adicionarRelatorio" type="button" class="myBtn rounded-circle text-dark p-3 btn text-light cabecalho">                    
-                    <i class="fas fa-2x fa-plus"></i></button>
+                    <i class="fas fa-2x fa-plus"></i>
+                </button>
+
+                <button style="display:none;" id="visualizar-final"  type="button"
+                        class="myBtnVi  rounded-circle text-dark p-3 btn btn-indigo" data-toggle="modal" data-target="#modalFinal">                    
+                        <i class="fas text-light fa-2x fa-eye"></i>
+                </button>
             </div>
            </div>          
     </div>
+
+
+
+
+    
+    <div class="modal fade " id="modalFinal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+  
+    <!-- Add class .modal-frame and then add class .modal-bottom (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-lg " role="document">
+  
+  
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row d-flex justify-content-center align-items-center">
+            
+            <textarea style="border: none;" rows="20" cols="30" id="textResultadoFinal"></textarea>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+            <div class="col">
+                <a id="compartilhar"><button style="width: 100%;" id="enviarFinal" type="button" class="btn  btn-dark-green">Enviar</button></a>
+            </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+  <
 </body>
