@@ -2,6 +2,7 @@
 $(document).ready(function(){
     adicionarNome();
     horarioEquipe();
+    liberaMenu();
     vetorResultado = Array();
     data = new Date();
     dia = data.getDate();
@@ -25,8 +26,10 @@ $(document).ready(function(){
         nome = $("#nome").val();
         localStorage.setItem("nome",nome);
         $("#usuario").html(localStorage.getItem("nome"));
-
+        $("#usuario-input").val(localStorage.getItem("nome"));
+        liberaMenu();
        });
+
        $('#nome').focusout(function(){
             $(this).val(" ");
        })
@@ -34,8 +37,19 @@ $(document).ready(function(){
        function adicionarNome(){
         $("#responsavel").val(localStorage.getItem("nome"));
         $("#usuario").html(localStorage.getItem("nome"));
-
+        $("#usuario-input").val(localStorage.getItem("nome"));
        }
+       function liberaMenu(){
+            var libera = $("#usuario-input").val();
+            if(isNaN(libera)){
+                $(".liberaMenu").attr("disabled",false);
+            }else{
+                $(".liberaMenu").prop("disabled",true);
+                alertConfirm("info","Atenção !","Informe seu nome para liberar o menu",5000);
+
+            }
+        }
+       
 
 
        function horarioEquipe(){

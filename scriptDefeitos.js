@@ -33,6 +33,8 @@ $(document).ready(function () {
         var linha = $ ("#linha").val();
         var tamanho = $("#tamanho").val();
         var esquadro= $("#esquadro").val();
+        var obs= $("#obs").val();
+
 
 
         var defeitos = $("#defeitos").val();
@@ -59,7 +61,9 @@ $(document).ready(function () {
                             "\n*Quantidade de Defeitos:* "+encontrada+
                             "\n*Porcentagem:* "+resultadoCalculo.toFixed(0)+"%"+
                             "\n*Tamanho:* "+tamanho+"mm"+
-                            "\n*Esquadro:* "+esquadro+"mm";
+                            "\n*Esquadro:* "+esquadro+"mm"+
+                            "\n\n Obs: \n:";
+
 
         try {
             vetorDefeitos.push(relatorioDefeitos);

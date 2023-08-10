@@ -34,14 +34,15 @@ $(document).ready(function(){
     relatorio ="\n\n*Linha:* " + linha +
         "\n*Referência:* " + referencia +
         "\n*Lote:* " + lote +
-        "\n*Situação:* "+ situacao+
-        "\n*Observações:* \n"+observacao+
+        "\n\n*Situação:* "+ situacao+
+        "\n\n*Observações:* \n"+observacao+
         "\n";
 
     if(observacao!=""){
       vetorRelatorio.push(relatorio);
       resultadoRelatorioNovo = vetorRelatorio.join('_____________________________________');
-      $("#tamanho-lista").html(vetorRelatorio.lenght);
+      $("#tamanho-listaFinal").html(vetorRelatorio.length);
+
       $("#textResultadoFinal").val(cabecalhoFixo+resultadoRelatorioNovo);
       $("#visualizar-final").fadeIn("slow");
       alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
