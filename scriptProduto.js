@@ -4,7 +4,7 @@ $(document).ready(function () {
     arrayAnalise=Array();   
     icon=" ";
     function deletarArray(){
-        while(arrayResultado.length){
+        while(vetorNovo.length){
             arrayResultado.pop();
             vetorNovo.pop();
         }
