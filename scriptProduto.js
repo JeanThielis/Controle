@@ -64,18 +64,20 @@ $(document).ready(function () {
     relatorio = icon+" *"+analise+"*:\n"+jst+"\n";
     arrayResultado.push(relatorio);
     vetorNovo = arrayResultado.join('');
-    $("#resultado-produto").val(cabecalho + vetorNovo+"*Obs:*");
+    $("#resultado-produto").val(vetorNovo+"*Obs:*");
     $("#justificativa").val(" ");
-
-
-
+    
     })
     $("#enviarProduto").click(function(){
         try {
         resultado=$("#resultado-produto").val();
-        conteudo = encodeURIComponent(resultado);
+        conteudo = encodeURIComponent(cabecalho+resultado);
         document.getElementById('compartilharProduto').href="https://api.whatsapp.com/send?text="+conteudo;
-        limparDados();
+        while(arrayResultado.lenght){
+            arrayResultado.pop();
+            vetorNovo.pop();
+        }
+        
 
         
         } catch (error) {
