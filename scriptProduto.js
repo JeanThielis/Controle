@@ -65,18 +65,18 @@ $(document).ready(function () {
     
     })
     $("#enviarProduto").click(function(){
+        
         try {
         resultado=$("#resultado-produto").val();
         conteudo = encodeURIComponent(cabecalho+resultado);
-        document.getElementById('compartilharProduto').href="https://api.whatsapp.com/send?text="+conteudo;
-        reload();
-       
-        
+        document.getElementById('compartilharProduto').href="https://api.whatsapp.com/send?text="+conteudo;            
         } catch (error) {
-          alert("deu ruim acionar o responsável do sistema");
-
+            
         }
-       
+        window.location.reload(true);        
+
+        
+        
     })
    
    

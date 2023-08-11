@@ -1,6 +1,8 @@
 $(document).ready(function () {
     vetorEmpeno=Array();
     data = new Date();
+    min = " ";
+    max = " ";
     data_nova=data.getDate()+"/"+data.getMonth()+"/"+data.getFullYear();
 
     $(".menu").click(function(){
@@ -49,7 +51,23 @@ $(document).ready(function () {
     $("#centralB").val('');
 
    }
-
+   function vistoriaEmpeno(empeno){
+    switch (linha) {
+        case 4:
+            min= -0.70;
+            max = 1.20;
+            break;
+        case 5:
+        
+            break;
+        case 6:
+        
+            break;    
+    
+        default:
+            break;
+    }
+   }
 
    $("#adicionarEmpeno").click(function () {
     var responsavel = $("#responsavel").val();
