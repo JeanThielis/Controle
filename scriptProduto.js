@@ -3,17 +3,8 @@ $(document).ready(function () {
     vetorNovo=Array();
     arrayAnalise=Array();   
     icon=" ";
-    function deletarArray(){
-        while(vetorNovo.length){
-            arrayResultado.pop();
-            vetorNovo.pop();
-        }
-    }
-   function limparDados(){
-    $("#referencia,#lote,#linha,#situacao,#resultado-produto2,#resultado-produto").val(" ");
-   }
-
-  
+    
+   
 
     $("#result-analise").change(function(){
          valor = parseInt($(this).val());
@@ -74,12 +65,11 @@ $(document).ready(function () {
     
     })
     $("#enviarProduto").click(function(){
-        limparDados();
-        deletarArray();
         try {
         resultado=$("#resultado-produto").val();
         conteudo = encodeURIComponent(cabecalho+resultado);
         document.getElementById('compartilharProduto').href="https://api.whatsapp.com/send?text="+conteudo;
+        reload();
        
         
         } catch (error) {
