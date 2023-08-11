@@ -74,12 +74,13 @@ $(document).ready(function () {
     
     })
     $("#enviarProduto").click(function(){
+        limparDados();
+        deletarArray();
         try {
         resultado=$("#resultado-produto").val();
         conteudo = encodeURIComponent(cabecalho+resultado);
         document.getElementById('compartilharProduto').href="https://api.whatsapp.com/send?text="+conteudo;
-        limparDados();
-        deletarArray();
+       
         
         } catch (error) {
           alert("deu ruim acionar o responsável do sistema");
