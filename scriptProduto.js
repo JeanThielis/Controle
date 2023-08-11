@@ -2,8 +2,12 @@ $(document).ready(function () {
     arrayResultado = Array();
     vetorNovo=Array();
     arrayAnalise=Array();   
-  
     icon=" ";
+    function deletarArray(){
+        while(arrayResultado.length){
+            arrayResultado.pop();
+        }
+    }
    function limparDados(){
     $("#referencia,#lote,#linha,#situacao,#resultado-produto2,#resultado-produto").val(" ");
    }
@@ -74,12 +78,7 @@ $(document).ready(function () {
         conteudo = encodeURIComponent(cabecalho+resultado);
         document.getElementById('compartilharProduto').href="https://api.whatsapp.com/send?text="+conteudo;
         limparDados();
-        while(arrayResultado.lenght){
-            arrayResultado.pop();
-            vetorNovo.pop();
-        }
-        
-
+        deletarArray();
         
         } catch (error) {
           alert("deu ruim acionar o responsável do sistema");
