@@ -6,6 +6,7 @@ $(document).ready(function () {
     function deletarArray(){
         while(arrayResultado.length){
             arrayResultado.pop();
+            vetorNovo.pop();
         }
     }
    function limparDados(){
