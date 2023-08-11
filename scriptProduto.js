@@ -73,6 +73,7 @@ $(document).ready(function () {
         resultado=$("#resultado-produto").val();
         conteudo = encodeURIComponent(cabecalho+resultado);
         document.getElementById('compartilharProduto').href="https://api.whatsapp.com/send?text="+conteudo;
+        limparDados();
         while(arrayResultado.lenght){
             arrayResultado.pop();
             vetorNovo.pop();
