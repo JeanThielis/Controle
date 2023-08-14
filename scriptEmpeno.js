@@ -206,12 +206,11 @@ $(document).ready(function () {
         }
     
         relatorioEmpeno =
-        "\n"+rangeL+
-        "\n"+rangeC+"\n"+
         "\n *Referencia:* "+referencia+
         "\n *Lote:* "+lote+
         "\n *Linha:* "+linha+
-        "\n"+
+        "\n"+rangeL+
+        "\n"+rangeC+"\n"+
         "\n *Peça (+)*"+
         "\n "+icona+" *Lado A:* "+ladoa.toFixed(2)+
         "\n "+iconb+" *Lado B:* "+ladob.toFixed(2)+
