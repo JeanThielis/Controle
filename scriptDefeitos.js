@@ -62,7 +62,7 @@ $(document).ready(function () {
                             "\n*Porcentagem:* "+resultadoCalculo.toFixed(0)+"%"+
                             "\n*Tamanho:* "+tamanho+"mm"+
                             "\n*Esquadro:* "+esquadro+"mm"+
-                            "\n\n *Obs:* \n";
+                            "\n\n *Obs:* \n"+obs;
 
 
         try {

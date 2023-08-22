@@ -254,6 +254,8 @@ $(document).ready(function () {
     resultado=$("#textResultadoEmpeno").val();
     conteudo = encodeURIComponent(resultado);
     document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
+    window.location.reload(true);        
+
     } catch (error) {
         alertConfirm('error','Xiiii','Dados não foram inseridos',3000);
 

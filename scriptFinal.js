@@ -61,6 +61,7 @@ $(document).ready(function(){
         conteudo = encodeURIComponent(resultado);
         document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
         $("#textResultadoFinal").val(" ");
+        window.location.reload(true);        
     
         } catch (error) {
         alertConfirm('error','Erro','Houve  problema no envio',3000);

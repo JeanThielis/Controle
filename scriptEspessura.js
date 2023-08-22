@@ -67,6 +67,8 @@ $(document).ready(function(){
         resultado=$("#textResultadoEspessura").val();
         conteudo = encodeURIComponent(resultado);
         document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
+        window.location.reload(true);        
+
         } catch (error) {
         alertConfirm('error','Xiiii','Não foi possivel fazer o envio',3000);
 
