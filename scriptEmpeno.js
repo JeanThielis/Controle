@@ -157,6 +157,8 @@ $(document).ready(function () {
         }
     
     
+
+        
         if(ladoa>=min && ladoa<=max){
             icona = "🟢";
         
@@ -209,7 +211,7 @@ $(document).ready(function () {
         "\n *Referencia:* "+referencia+
         "\n *Lote:* "+lote+
         "\n *Linha:* "+linha+
-        "\n"+rangeL+
+        "\n\n"+rangeL+
         "\n"+rangeC+"\n"+
         "\n *Peça (+)*"+
         "\n "+icona+" *Lado A:* "+ladoa.toFixed(2)+
@@ -254,12 +256,13 @@ $(document).ready(function () {
     resultado=$("#textResultadoEmpeno").val();
     conteudo = encodeURIComponent(resultado);
     document.getElementById('compartilhar').href="https://api.whatsapp.com/send?text="+conteudo;
-    window.location.reload(true);        
 
     } catch (error) {
         alertConfirm('error','Xiiii','Dados não foram inseridos',3000);
 
     }
+    window.location.reload(true);        
+
    
 })
 
