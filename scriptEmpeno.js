@@ -131,24 +131,28 @@ $(document).ready(function () {
     "\n*Data:* "+data_nova+"\n\n";
     
     try {
-        if(centrala>=min && centrala<=max){
+        //Empeno Central
+        if(centrala>=centralMin && centrala<=centralMax){
             iconca = "🟢";
         
         }else{
             iconca = "🔴";
         } 
+
         if(centralb>=min && centralb<=max){
             iconcb = "🟢";
         
         }else{
             iconcb = "🔴";
     
-        } if(centralA>=min && centralA<=max){
+        } if(centralA>=centralMin && centralA<=centralMax){
             iconCA = "🟢";
         
         }else{
             iconCA = "🔴";    
         } 
+
+        // Empeno lateral
         if(centralB>=min && centralB<=max){
             iconCB = "🟢";
         
