@@ -242,7 +242,8 @@ $(document).ready(function () {
             $("#tamanho-lista").html(vetorEmpeno.length);
             $("#textResultadoEmpeno").val(cabecalho+vetorNovo);
             $("#btn-visualizarEmpeno").fadeIn("slow");
-            alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)  
+            alertConfirm('success','Legal','Dados Inserido com Sucesso',3000);
+            limparForm();  
 
     } catch (error) {
         alertConfirm('info','Atenção','Selecione a Linha',5000);
