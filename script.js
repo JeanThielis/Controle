@@ -10,6 +10,9 @@ $(document).ready(function(){
     ano = data.getFullYear();
     data_nova= dia+"/"+mes+"/"+ano;
 
+
+   
+
     function alertConfirm(tipo,titulo,mensagem,time){
         Swal.fire({
             title: titulo,
@@ -20,6 +23,8 @@ $(document).ready(function(){
           })
     
        };
+
+       
        
 
        $("#nome").keyup(function(){

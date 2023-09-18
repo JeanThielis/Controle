@@ -4,9 +4,7 @@ $(document).ready(function(){
     $("#espessuraNominal,#lado1,#lado2,#lado3,#lado4").mask("0.00");
     $("#prenca").mask("P0/C0");
 
-    function fecharAlert(){
-        $("#alertSucesso").fadeOut();
-    }
+   
     function limparDados(){
     $("#lado1,#lado2,#lado3,#lado4,#prenca").val(" ");
     }

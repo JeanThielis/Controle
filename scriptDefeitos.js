@@ -9,6 +9,11 @@ $(document).ready(function () {
         $("#linha").val('');
        
     }
+
+    $("#esquadro,#tamanho").mask("0.00");
+    $("#tamanho").mask("000.0");
+
+
     $("#lote").keyup(function(){
         $(this).val($(this).val().toUpperCase());
       });

@@ -1,9 +1,8 @@
-<head>
-    <meta name="theme-color" content="#660000" />
 
-</head>
 <body>
     <script src="script.js"></script>
+    <script src="mask.js"></script>
+
     <div class="container-fluid transicao">
 
         <div style="border: none;" class="row cabecalho text-dark p-2 fixed-top">
@@ -38,16 +37,12 @@
                     <label class="text-light">Linha:</label>
                     <select class="bordaSelect form-control text-light" name="linha" id="linha">
                         <option value="0">Selecione</option>
-                        <option>Linha 1 </option>
-                        <option>Linha 2 </option>
-                        <option>Escolha 3 </option>
-                        <option>Escolha 4 </option>
-                        <option>Linha 4 </option>
-                        <option>Linha 5 </option>
-                        <option>Escolha 6A/B </option>
-                        <option>Escolha 6A </option>
-                        <option>Escolha 6B </option>
-                        <option>Saída do Forno </option>
+                        <option>4 </option>
+                        <option>5 </option>
+                        <option>6A/6B </option>
+                        <option>6A</option>
+                        <option>6B</option>
+                        <option>Saída do Forno</option>
                     </select>
                 </div>
             </div>
@@ -154,13 +149,13 @@
                 </div>
                 <div class="col p-1">
                     <div class="md-form">
-                        <input type="number" id="peso" class="form-control text-light">
+                        <input type="number" id="peso-check" class="form-control text-light">
                         <label class="text-light" for="peso">Peso</label>
                     </div>
                 </div>
                 <div class="col p-1">
                     <div class="md-form">
-                        <input type="number" id="espessura" class="form-control text-light">
+                        <input type="number" id="espessura-check" class="form-control text-light">
                         <label class="text-light" for="espessura">Espessura</label>
                     </div>
                 </div>
