@@ -10,7 +10,7 @@ $(document).ready(function () {
        
     }
 
-    $("#esquadro,#tamanho").mask("0.00");
+    $("#esquadro").mask("0.00");
     $("#tamanho").mask("000.0");
 
 
