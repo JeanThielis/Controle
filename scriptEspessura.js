@@ -46,6 +46,9 @@ $(document).ready(function(){
             "\n*Linha:* " + linha +
             "\n*Referência:* " + referencia +
             "\n*Lote:* " + lote +
+            
+            "\n\n"+
+            "Range:(min: "+min.toFixed(2)+", padrão: "+espessura+", max: "+max.toFixed(2)+")"+
             "\n\n";
         
         relatorio = prenca+" : "+media.toFixed(2)+" "+icon+"\n";
