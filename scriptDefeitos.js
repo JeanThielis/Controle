@@ -52,7 +52,7 @@ $(document).ready(function () {
         }
 
 
-        cabecalho =    "\n*Defeitos encontrado no Extra*"+  
+        cabecalho =    "\n*Defeito(s) encontrado(s) no Extra*"+  
         "\n*Responsável:* " +responsavel+
         "\n*Equipe:* "+equipe+
         "\n*Data:* "+data_nova+"\n\n";
