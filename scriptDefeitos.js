@@ -62,7 +62,7 @@ $(document).ready(function () {
                             "\n*Lote:* "+ lote+
                             "\n\n"+
                             "*Defeitos:* "+defeitos+
-                            "\n*Quantidade Vistoridas:* "+vistoriada+
+                            "\n*Quantidade Vistoriadas:* "+vistoriada+
                             "\n*Quantidade de Defeitos:* "+encontrada+
                             "\n*Porcentagem:* "+resultadoCalculo.toFixed(0)+"%"+
                             "\n*Tamanho:* "+tamanho+"mm"+
