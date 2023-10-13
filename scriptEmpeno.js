@@ -70,17 +70,17 @@ $(document).ready(function () {
     
     switch (linha) {
         case "4":
-            min =-0.70;
+            min =-0.50;
             max =1.20;
-            centralMin=0.00;
-            centralMax=1.50;
+            centralMin=-0.50;
+            centralMax=1.80;
             rangeL= "Range Lateral:("+min.toFixed(2)+" a "+max.toFixed(2)+")";
             rangeC= "Range Central:("+centralMin.toFixed(2)+" a "+centralMax.toFixed(2)+")";
 
             break;
         case "5":
             min =-0.50;
-            max =1.20;
+            max =1.00;
             centralMin=-0.50;
             centralMax=1.50;
             rangeL= "Range Lateral:("+min.toFixed(2)+" a "+max.toFixed(2)+")";
@@ -139,7 +139,7 @@ $(document).ready(function () {
             iconca = "🔴";
         } 
 
-        if(centralb>=min && centralb<=max){
+        if(centralb>=centralMin && centralb<=centralMax){
             iconcb = "🟢";
         
         }else{
@@ -152,8 +152,8 @@ $(document).ready(function () {
             iconCA = "🔴";    
         } 
 
-        // Empeno lateral
-        if(centralB>=min && centralB<=max){
+        // Empeno Central
+        if(centralB>=centralMin && centralB<=centralMax){
             iconCB = "🟢";
         
         }else{
