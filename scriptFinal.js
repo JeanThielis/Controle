@@ -22,7 +22,6 @@ $(document).ready(function(){
     var equipe = $("#equipe").val();
     var lote = $ ("#lote").val();
     var linha = $ ("#linha").val();
-    var situacao = $("#situacao").val();
     observacao = $("#observacao").val();
 
 
@@ -34,7 +33,6 @@ $(document).ready(function(){
     relatorio ="\n\n*Linha:* " + linha +
         "\n*Referência:* " + referencia +
         "\n*Lote:* " + lote +
-        "\n\n*Situação:* "+ situacao+
         "\n\n*Observações:* \n"+observacao+
         "\n";
 

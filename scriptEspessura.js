@@ -36,8 +36,7 @@ $(document).ready(function(){
         max = espessura + (espessura*0.05);
         media = (parseFloat($("#lado1").val()) + parseFloat($("#lado2").val()) + parseFloat($("#lado3").val())+ parseFloat($("#lado4").val()))/4; 
 
-        if (media < min || media > max ){icon = "❌"}
-        else{icon = "✅";}
+        if (media < min || media > max ){icon = "🔴"} else{icon = "🟢";}
 
         cabecalho = "\n*Análise de Espessura*" +
             "\n*Responsável:* " + responsavel +
