@@ -18,7 +18,7 @@
     background-color: #292929;
 }
 .cabecalho{
-  background: rgb(185, 23, 104);
+  background: rgb(43, 61, 87);
   color: white;
 }
 
@@ -45,7 +45,7 @@
   background-size: cover; /* Resize the background image to cover the entire container */
   }
   .vidro{
-    background: rgba(185,23,104,1.0);
+    background: rgba(43,61,87,1.0);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
