@@ -53,7 +53,7 @@ $(document).ready(function(){
         relatorio = prenca+" : "+media.toFixed(2)+" "+icon+"\n";
         vetor.push(relatorio);
         vetorNovo = vetor.join('');
-        $("#amostra-espessura").html(prenca+": "+media.toFixed(2)+""+icon);
+        $("#amostra-espessura").html(icon+" "+prenca+": "+media.toFixed(2));
         $("#tamanho-listaEspessura").html(vetor.length);
         $("#textResultadoEspessura").val(cabecalho+vetorNovo);
         $("#btn-visualizarEspessura").fadeIn("slow");
