@@ -79,8 +79,8 @@ $(document).ready(function () {
 
             break;
         case "5":
-            min =-0.50;
-            max =1.00;
+            min =-0.70;
+            max =1.20;
             centralMin=-0.50;
             centralMax=1.50;
             rangeL= "Range Lateral:("+min.toFixed(2)+" a "+max.toFixed(2)+")";
