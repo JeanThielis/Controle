@@ -50,7 +50,7 @@ $(document).ready(function(){
             "Range:(min: "+min.toFixed(2)+", padrão: "+espessura+", max: "+max.toFixed(2)+")"+
             "\n\n";
         
-        relatorio = prenca+" : "+media.toFixed(2)+" "+icon+"\n";
+        relatorio = icon+" "+ prenca+" : "+media.toFixed(2)+" "+"\n";
         vetor.push(relatorio);
         vetorNovo = vetor.join('');
         $("#amostra-espessura").html(icon+" "+prenca+": "+media.toFixed(2));

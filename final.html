@@ -55,7 +55,9 @@
                             <option>6A/6B</option>
                             <option>6A</option>
                             <option>6B</option>
-                            <option>Saída do Forno</option>
+                            <option>Forno 5</option>
+                            <option>Forno 6</option>
+
                         </select>
                     </div>
             </div>
@@ -75,6 +77,20 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-6">
+                    <label class="text-light" >Situação:</label>
+                    <select class="bordaSelect form-control text-light" name="situacao" id="situacao">
+                        <option value="0">Informe</option>
+                        <option value="1">🟢</option>
+                        <option value="2">🟡</option>
+                        <option value="3">🟠</option>
+                        <option value="4">🔴</option>
+                       
+
+                    </select>
+                </div>
+            </div>
             
 
            </div>
@@ -82,13 +98,13 @@
         <div  class="alert corFundo">
             <div class="row">
                 <div class="col">
-                    <label class="text-light">Informações do Turno</label>
+                    <label class="text-light">Observações</label>
                 </div>
                 
             </div>
             <div class="row">
-                <div class="col">
-                    <textarea cols="10" rows="8" class="form-control" id="observacao" name="relatorio"></textarea>
+                <div  class="col">
+                    <textarea style="display: none;" cols="10" rows="8" class="form-control" id="observacao" name="observacao"></textarea>
                 </div>
             </div>           
             

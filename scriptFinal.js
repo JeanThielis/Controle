@@ -14,6 +14,23 @@ $(document).ready(function(){
       })
 
    };
+  
+
+   $("#situacao").change(function(){
+     var situacao = parseInt($(this).val());
+
+     if (situacao > 1){
+           $("#observacao").css("display","block");
+    }
+    else{
+      $("#observacao").css("display","none");
+
+    }
+      
+     })
+
+   
+   
 
   $("#adicionarRelatorio").click(function () { 
     
@@ -22,7 +39,28 @@ $(document).ready(function(){
     var equipe = $("#equipe").val();
     var lote = $ ("#lote").val();
     var linha = $ ("#linha").val();
-    observacao = $("#observacao").val();
+    var situacao = $ ("#situacao").val();
+    var observacao = $("#observacao").val();
+
+    switch (situacao) {
+      case "1":
+        situacao = "🟢";
+        break;
+      case "2":
+        situacao = "🟡"
+        break;
+        
+      case "3":
+        situacao = "🟠"
+      break;
+      
+      case "4":
+        situacao = "🔴"
+      break;
+    
+      default:
+        break;
+    }
 
 
     cabecalhoFixo = "\n*Relatório Final*" +
@@ -33,10 +71,11 @@ $(document).ready(function(){
     relatorio ="\n\n*Linha:* " + linha +
         "\n*Referência:* " + referencia +
         "\n*Lote:* " + lote +
+        "\n*Situação:* "+ situacao+
         "\n\n*Observações:* \n"+observacao+
         "\n";
 
-    if(observacao!=""){
+   
       vetorRelatorio.push(relatorio);
       resultadoRelatorioNovo = vetorRelatorio.join('_____________________________________');
       $("#tamanho-listaFinal").html(vetorRelatorio.length);
@@ -46,10 +85,6 @@ $(document).ready(function(){
       alertConfirm('success','Legal','Dados Inserido com Sucesso',3000)
       limparDados();
 
-    }else{
-      alertConfirm('error','Erro','Campo de obersavação vazio',3000);
-      $("#observacao").focus();
-    }
     
   });
 
