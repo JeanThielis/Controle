@@ -11,6 +11,18 @@ $(document).ready(function(){
     data_nova= dia+"/"+mes+"/"+ano;
 
 
+   function verificaLinha(){
+    if($("#linha").val()== null || $("#linha").val()== "0" ){
+      alertConfirm('error',"Atenção !",'Informe a Linha do Produto',3000);
+    };
+   }
+
+   $("#referencia").click(function(){
+      verificaLinha();
+   })
+   
+
+
    
 
     function alertConfirm(tipo,titulo,mensagem,time){

@@ -20,17 +20,16 @@ $(document).ready(function(){
      var situacao = parseInt($(this).val());
 
      if (situacao > 1){
-           $("#observacao").css("display","block");
+           $("#observacao").fadeIn("slow");
+
     }
     else{
-      $("#observacao").css("display","none");
+      $("#observacao").fadeOut("slow");
 
     }
       
      })
 
-   
-   
 
   $("#adicionarRelatorio").click(function () { 
     
