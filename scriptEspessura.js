@@ -47,7 +47,7 @@ $(document).ready(function(){
             "\n*Lote:* " + lote +
             
             "\n\n"+
-            "Range:(min: "+min.toFixed(2)+", padrão: "+espessura+", max: "+max.toFixed(2)+")"+
+            "Range:(min: "+min.toFixed(2)+", padrão: "+espessura.toFixed(2)+ ", max: "+max.toFixed(2)+")"+
             "\n\n";
         
         relatorio = icon+" "+ prenca+" : "+media.toFixed(2)+" "+"\n";
