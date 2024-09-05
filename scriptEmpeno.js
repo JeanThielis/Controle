@@ -70,18 +70,18 @@ $(document).ready(function () {
     
     switch (linha) {
         case "4":
-            min =-0.70;
-            max =1.80;
-            centralMin=-1.50;
+            min =-0.50;
+            max =1.20;
+            centralMin=-0.50;
             centralMax=1.80;
             rangeL= "Range Lateral:("+min.toFixed(2)+" a "+max.toFixed(2)+")";
             rangeC= "Range Central:("+centralMin.toFixed(2)+" a "+centralMax.toFixed(2)+")";
 
             break;
         case "5":
-            min =-0.70;
-            max =1.80;
-            centralMin=-1.50;
+            min =-0.50;
+            max =1.20;
+            centralMin=-0.50;
             centralMax=1.80;
             rangeL= "Range Lateral:("+min.toFixed(2)+" a "+max.toFixed(2)+")";
             rangeC= "Range Central:("+centralMin.toFixed(2)+" a "+centralMax.toFixed(2)+")";
@@ -89,9 +89,9 @@ $(document).ready(function () {
             break;
         case "6":
             min =-0.70;
-            max =1.80;
-            centralMin=-1.50;
-            centralMax=1.80;
+            max =1.20;
+            centralMin=-0.50;
+            centralMax=1.50;
             rangeL= "Range Lateral:("+min.toFixed(2)+" a "+max.toFixed(2)+")";
             rangeC= "Range Central:("+centralMin.toFixed(2)+" a "+centralMax.toFixed(2)+")";
             break;    
