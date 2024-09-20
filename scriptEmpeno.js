@@ -13,9 +13,19 @@ $(document).ready(function () {
             }
         });
     });
-    $("#lote").keyup(function(){
+    $("#lote,#lote-base").keyup(function(){
         $(this).val($(this).val().toUpperCase());
       });
+
+      function verificaLoteBase(){
+        if($("#lote-base").val()== null || $("#lote-base").val()== "" ){
+          alertConfirm('error',"Atenção !",'Informe o Lote Base',3000);
+        };
+       }
+    
+       $("#ladoa").click(function(){
+          verificaLoteBase();
+       })
 
 
     function alertConfirm(tipo,titulo,mensagem,time){
@@ -107,6 +117,7 @@ $(document).ready(function () {
     var equipe = $("#equipe").val();
     var referencia = $("#referencia").val();
     var lote = $("#lote").val();
+    var loteBase = $("#lote-base").val();
     var linha = $("#linha").val();
 
     var ladoa = parseFloat($("#ladoa").val());
@@ -214,6 +225,7 @@ $(document).ready(function () {
         relatorioEmpeno =
         "\n *Referencia:* "+referencia+
         "\n *Lote:* "+lote+
+        "\n *Lote Base:* "+loteBase+
         "\n *Linha:* "+linha+
         "\n\n"+rangeL+
         "\n"+rangeC+"\n"+
@@ -256,6 +268,11 @@ $(document).ready(function () {
 
     
    });
+
+   
+
+
+
    $("#enviarEmpeno").click(function(){
     try {
     resultado=$("#textResultadoEmpeno").val();
