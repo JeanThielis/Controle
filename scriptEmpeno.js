@@ -20,11 +20,14 @@ $(document).ready(function () {
       function verificaLoteBase(){
         if($("#lote-base").val()== null || $("#lote-base").val()== "" ){
           alertConfirm('error',"Atenção !",'Informe o Lote Base',3000);
+          $("#ladoa,#ladoA").val('');
+          $("#lote-base").focus();
         };
        }
-    
-       $("#ladoa,#ladoA").click(function(){
+       
+       $("#ladoa,#ladoA").keyup(function(){
           verificaLoteBase();
+          
        });
 
 
