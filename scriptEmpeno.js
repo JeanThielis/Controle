@@ -21,14 +21,34 @@ $(document).ready(function () {
         if($("#lote-base").val()== null || $("#lote-base").val()== "" ){
           alertConfirm('error',"Atenção !",'Informe o Lote Base',3000);
           $("#ladoa,#ladoA").val('');
-          stopPropagation();
+          
         };
        }
+        $("#ladoa,#ladoA").keydown(function(){
+            linha = $("#linha").val();
+            if(linha!= '4'){
+                
+                verificaLoteBase();
+            }
+            else{
+                loteBase = " ";
+            }
+            
+        });
+
+        $("#linha").change(function () { 
+            if($(this).val()!=4){
+                $("#lote-base,#lbl-loteBase").fadeIn("slow");
+            }
+            else{
+                $("#lote-base,#lbl-loteBase").fadeOut("slow");
+            }
+            
+        });
+            
        
-       $("#ladoa,#ladoA").keyup(function(){
-          verificaLoteBase();
-          
-       });
+      
+       
 
 
 
@@ -121,7 +141,7 @@ $(document).ready(function () {
     var equipe = $("#equipe").val();
     var referencia = $("#referencia").val();
     var lote = $("#lote").val();
-    var loteBase = $("#lote-base").val();
+    loteBase = $("#lote-base").val();
     var linha = $("#linha").val();
 
     var ladoa = parseFloat($("#ladoa").val());
