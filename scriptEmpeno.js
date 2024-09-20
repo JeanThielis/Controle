@@ -23,9 +23,11 @@ $(document).ready(function () {
         };
        }
     
-       $("#ladoa").click(function(){
+       $("#ladoa,#ladoA").focus(function(){
           verificaLoteBase();
-       })
+          $("#lote-base").focus();
+       });
+
 
 
     function alertConfirm(tipo,titulo,mensagem,time){
