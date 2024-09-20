@@ -21,7 +21,7 @@ $(document).ready(function () {
         if($("#lote-base").val()== null || $("#lote-base").val()== "" ){
           alertConfirm('error',"Atenção !",'Informe o Lote Base',3000);
           $("#ladoa,#ladoA").val('');
-          $("#lote-base").focus();
+          stopPropagation();
         };
        }
        
