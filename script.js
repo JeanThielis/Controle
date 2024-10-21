@@ -69,24 +69,19 @@ $(document).ready(function(){
        
 
 
-       /*function horarioEquipe(){
+       function horarioEquipe(){
         time = new Date;
         hora = time.getHours();
-
-        if(time.getDate()%2===0){
-
-            if(hora>5 && hora<18){
+       
+            if(hora>5 && hora<14){
                 $("#equipe").val("1");
                 $("#usuarioEq").html(' - Equipe 1');
             }
-            else if (hora>17 && hora<6) {
+            else if (hora>13 && hora<22) {
                 $("#equipe").val("2");
                 $("#usuarioEq").html(' - Equipe 2');
 
             }
-
-        }
-       
             else if (hora>21 || hora<6) {
                 $("#equipe").val("3");
                 $("#usuarioEq").html(' - Equipe 3');
@@ -97,7 +92,7 @@ $(document).ready(function(){
 
             }
           
-    }*/
+    }
     function limparFormulario(){
          $("#linha").val(" ");
         $("#referencia").val(" ");
