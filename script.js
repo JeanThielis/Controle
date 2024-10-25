@@ -70,29 +70,38 @@ $(document).ready(function(){
 
 
        function horarioEquipe(){
-        time = new Date;
-        hora = time.getHours();
+        date = new Date;
+        dia = date.getDate();
+        hora = date.getHours() ;
        
-            if(hora>5 && hora<14){
-                $("#equipe").val("1");
-                $("#usuarioEq").html(' - Equipe 1');
-            }
-            else if (hora>13 && hora<22) {
-                $("#equipe").val("2");
-                $("#usuarioEq").html(' - Equipe 2');
+        if(dia%2===0){situacao = 0;}else{situacao = 1;}
 
-            }
-            else if (hora>21 || hora<6) {
-                $("#equipe").val("3");
-                $("#usuarioEq").html(' - Equipe 3');
 
-            }
-            else{
-                alertConfirm("erros","Xiiii","Tente novamente"+horaCerta,3000);
-
-            }
-          
-    }
+        switch (situacao) {
+            case 0:
+                if(hora>5 && hora<18){
+                    $("#equipe").val("1");
+                    $("#usuarioEq").html(' - Equipe 1');  
+                }else{
+                    $("#equipe").val("2");
+                    $("#usuarioEq").html(' - Equipe 2');  
+                }
+                break;
+            case 1:
+                if(hora>5 && hora<18){
+                    $("#equipe").val("3");
+                    $("#usuarioEq").html(' - Equipe 3');                    
+                }else{
+                    $("#equipe").val("4");
+                    $("#usuarioEq").html(' - Equipe 4');     
+                }
+                break;
+            default:
+                console.log("deu ruim !!!");
+                break;
+        }
+       
+       }        
     function limparFormulario(){
          $("#linha").val(" ");
         $("#referencia").val(" ");
