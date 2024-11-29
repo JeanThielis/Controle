@@ -107,7 +107,7 @@ $(document).ready(function () {
             min =-0.50;
             max =1.20;
             centralMin=-0.50;
-            centralMax=1.80;
+            centralMax=1.50;
             rangeL= "Range Lateral:("+min.toFixed(2)+" a "+max.toFixed(2)+")";
             rangeC= "Range Central:("+centralMin.toFixed(2)+" a "+centralMax.toFixed(2)+")";
 
