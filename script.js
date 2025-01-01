@@ -74,7 +74,7 @@ $(document).ready(function(){
         dia = date.getDate();
         hora = date.getHours() ;
        
-        if(dia%2===0){situacao = 1;}else{situacao = 0;}
+        if(dia%2===0){situacao = 0;}else{situacao = 1;}
 
 
         switch (situacao) {
